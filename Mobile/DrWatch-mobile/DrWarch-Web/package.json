@@ -1,0 +1,9 @@
+{
+  "name": "dr-warch-web",
+  "version": "0.0.0",
+  "description": "DrWarch-Web",
+  "main": "server.js",
+  "author": {
+    "name": "chris"
+  }
+}
