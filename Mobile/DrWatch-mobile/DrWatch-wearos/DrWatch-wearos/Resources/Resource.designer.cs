@@ -1373,11 +1373,11 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f020033
 			public const int notification_icon_background = 2130837555;
 			
-			// aapt resource value: 0x7f020046
-			public const int notification_template_icon_bg = 2130837574;
-			
 			// aapt resource value: 0x7f020047
-			public const int notification_template_icon_low_bg = 2130837575;
+			public const int notification_template_icon_bg = 2130837575;
+			
+			// aapt resource value: 0x7f020048
+			public const int notification_template_icon_low_bg = 2130837576;
 			
 			// aapt resource value: 0x7f020034
 			public const int notification_tile_bg = 2130837556;
@@ -1392,46 +1392,49 @@ namespace DrWatch_wearos
 			public const int open_on_phone_animation = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int preference_wrapped_icon = 2130837560;
+			public const int pills = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int ws_action_item_background = 2130837561;
+			public const int preference_wrapped_icon = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int ws_action_item_icon_background = 2130837562;
+			public const int ws_action_item_background = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int ws_ic_expand_less_white_22 = 2130837563;
+			public const int ws_action_item_icon_background = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int ws_ic_expand_more_white_22 = 2130837564;
+			public const int ws_ic_expand_less_white_22 = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int ws_ic_more_horiz_24dp_wht = 2130837565;
+			public const int ws_ic_expand_more_white_22 = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int ws_ic_more_vert_24dp_wht = 2130837566;
+			public const int ws_ic_more_horiz_24dp_wht = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int ws_switch_thumb_material_anim = 2130837567;
+			public const int ws_ic_more_vert_24dp_wht = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int ws_switch_thumb_mtrl_14w = 2130837568;
+			public const int ws_switch_thumb_material_anim = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int ws_switch_thumb_mtrl_15w = 2130837569;
+			public const int ws_switch_thumb_mtrl_14w = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int ws_switch_thumb_mtrl_16w = 2130837570;
+			public const int ws_switch_thumb_mtrl_15w = 2130837570;
 			
 			// aapt resource value: 0x7f020043
-			public const int ws_switch_thumb_mtrl_17w = 2130837571;
+			public const int ws_switch_thumb_mtrl_16w = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int ws_switch_thumb_mtrl_18w = 2130837572;
+			public const int ws_switch_thumb_mtrl_17w = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int ws_switch_track_mtrl = 2130837573;
+			public const int ws_switch_thumb_mtrl_18w = 2130837573;
+			
+			// aapt resource value: 0x7f020046
+			public const int ws_switch_track_mtrl = 2130837574;
 			
 			static Drawable()
 			{
