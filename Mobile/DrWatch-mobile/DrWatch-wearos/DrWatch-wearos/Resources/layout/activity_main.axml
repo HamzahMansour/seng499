@@ -16,5 +16,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hello_world" />
+        <android.support.v7.widget.RecyclerView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:paddingTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView"
+            android:scrollbars="vertical" />
     </FrameLayout>
 </android.support.wear.widget.BoxInsetLayout>

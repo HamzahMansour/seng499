@@ -1570,23 +1570,23 @@ namespace DrWatch_wearos
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0f0046
-			public const int action0 = 2131689542;
-			
-			// aapt resource value: 0x7f0f0043
-			public const int action_container = 2131689539;
-			
-			// aapt resource value: 0x7f0f004a
-			public const int action_divider = 2131689546;
+			// aapt resource value: 0x7f0f0047
+			public const int action0 = 2131689543;
 			
 			// aapt resource value: 0x7f0f0044
-			public const int action_image = 2131689540;
+			public const int action_container = 2131689540;
+			
+			// aapt resource value: 0x7f0f004b
+			public const int action_divider = 2131689547;
 			
 			// aapt resource value: 0x7f0f0045
-			public const int action_text = 2131689541;
+			public const int action_image = 2131689541;
 			
-			// aapt resource value: 0x7f0f0054
-			public const int actions = 2131689556;
+			// aapt resource value: 0x7f0f0046
+			public const int action_text = 2131689542;
+			
+			// aapt resource value: 0x7f0f0055
+			public const int actions = 2131689557;
 			
 			// aapt resource value: 0x7f0f000a
 			public const int adjust_height = 2131689482;
@@ -1594,14 +1594,14 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f000b
 			public const int adjust_width = 2131689483;
 			
-			// aapt resource value: 0x7f0f003c
-			public const int alertTitle = 2131689532;
+			// aapt resource value: 0x7f0f003d
+			public const int alertTitle = 2131689533;
 			
 			// aapt resource value: 0x7f0f0013
 			public const int all = 2131689491;
 			
-			// aapt resource value: 0x7f0f003b
-			public const int animatedWrapperContainer = 2131689531;
+			// aapt resource value: 0x7f0f003c
+			public const int animatedWrapperContainer = 2131689532;
 			
 			// aapt resource value: 0x7f0f002e
 			public const int async = 2131689518;
@@ -1621,8 +1621,8 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f0033
 			public const int buttonPanel = 2131689523;
 			
-			// aapt resource value: 0x7f0f0047
-			public const int cancel_action = 2131689543;
+			// aapt resource value: 0x7f0f0048
+			public const int cancel_action = 2131689544;
 			
 			// aapt resource value: 0x7f0f001d
 			public const int center = 2131689501;
@@ -1633,8 +1633,8 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f0022
 			public const int center_vertical = 2131689506;
 			
-			// aapt resource value: 0x7f0f004f
-			public const int chronometer = 2131689551;
+			// aapt resource value: 0x7f0f0050
+			public const int chronometer = 2131689552;
 			
 			// aapt resource value: 0x7f0f0023
 			public const int clip_horizontal = 2131689507;
@@ -1642,8 +1642,8 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f0024
 			public const int clip_vertical = 2131689508;
 			
-			// aapt resource value: 0x7f0f003d
-			public const int configView = 2131689533;
+			// aapt resource value: 0x7f0f003e
+			public const int configView = 2131689534;
 			
 			// aapt resource value: 0x7f0f0011
 			public const int dark = 2131689489;
@@ -1651,17 +1651,17 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f001f
 			public const int dashed = 2131689503;
 			
-			// aapt resource value: 0x7f0f003f
-			public const int dismiss_overlay_button = 2131689535;
+			// aapt resource value: 0x7f0f0040
+			public const int dismiss_overlay_button = 2131689536;
 			
-			// aapt resource value: 0x7f0f003e
-			public const int dismiss_overlay_explain = 2131689534;
+			// aapt resource value: 0x7f0f003f
+			public const int dismiss_overlay_explain = 2131689535;
 			
 			// aapt resource value: 0x7f0f0025
 			public const int end = 2131689509;
 			
-			// aapt resource value: 0x7f0f0056
-			public const int end_padder = 2131689558;
+			// aapt resource value: 0x7f0f0057
+			public const int end_padder = 2131689559;
 			
 			// aapt resource value: 0x7f0f0026
 			public const int fill = 2131689510;
@@ -1681,17 +1681,20 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f001b
 			public const int height = 2131689499;
 			
-			// aapt resource value: 0x7f0f0051
-			public const int icon = 2131689553;
+			// aapt resource value: 0x7f0f0052
+			public const int icon = 2131689554;
 			
-			// aapt resource value: 0x7f0f0055
-			public const int icon_group = 2131689557;
+			// aapt resource value: 0x7f0f0056
+			public const int icon_group = 2131689558;
 			
 			// aapt resource value: 0x7f0f000d
 			public const int icon_only = 2131689485;
 			
-			// aapt resource value: 0x7f0f0050
-			public const int info = 2131689552;
+			// aapt resource value: 0x7f0f005a
+			public const int imageView = 2131689562;
+			
+			// aapt resource value: 0x7f0f0051
+			public const int info = 2131689553;
 			
 			// aapt resource value: 0x7f0f0031
 			public const int italic = 2131689521;
@@ -1711,8 +1714,8 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f0005
 			public const int line3 = 2131689477;
 			
-			// aapt resource value: 0x7f0f0049
-			public const int media_actions = 2131689545;
+			// aapt resource value: 0x7f0f004a
+			public const int media_actions = 2131689546;
 			
 			// aapt resource value: 0x7f0f002c
 			public const int multiPage = 2131689516;
@@ -1720,8 +1723,8 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f002a
 			public const int multi_page = 2131689514;
 			
-			// aapt resource value: 0x7f0f0075
-			public const int nested_icon = 2131689589;
+			// aapt resource value: 0x7f0f0079
+			public const int nested_icon = 2131689593;
 			
 			// aapt resource value: 0x7f0f000c
 			public const int none = 2131689484;
@@ -1729,32 +1732,35 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f0032
 			public const int normal = 2131689522;
 			
-			// aapt resource value: 0x7f0f0053
-			public const int notification_background = 2131689555;
+			// aapt resource value: 0x7f0f0054
+			public const int notification_background = 2131689556;
+			
+			// aapt resource value: 0x7f0f004d
+			public const int notification_main_column = 2131689549;
 			
 			// aapt resource value: 0x7f0f004c
-			public const int notification_main_column = 2131689548;
+			public const int notification_main_column_container = 2131689548;
 			
-			// aapt resource value: 0x7f0f004b
-			public const int notification_main_column_container = 2131689547;
+			// aapt resource value: 0x7f0f007a
+			public const int off = 2131689594;
 			
-			// aapt resource value: 0x7f0f0076
-			public const int off = 2131689590;
+			// aapt resource value: 0x7f0f007b
+			public const int on = 2131689595;
 			
-			// aapt resource value: 0x7f0f0077
-			public const int on = 2131689591;
+			// aapt resource value: 0x7f0f003b
+			public const int parentPanel = 2131689531;
 			
 			// aapt resource value: 0x7f0f003a
-			public const int parentPanel = 2131689530;
+			public const int recyclerView = 2131689530;
 			
 			// aapt resource value: 0x7f0f0016
 			public const int right = 2131689494;
 			
-			// aapt resource value: 0x7f0f0052
-			public const int right_icon = 2131689554;
+			// aapt resource value: 0x7f0f0053
+			public const int right_icon = 2131689555;
 			
-			// aapt resource value: 0x7f0f004d
-			public const int right_side = 2131689549;
+			// aapt resource value: 0x7f0f004e
+			public const int right_side = 2131689550;
 			
 			// aapt resource value: 0x7f0f0019
 			public const int round = 2131689497;
@@ -1780,8 +1786,8 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f0029
 			public const int start = 2131689513;
 			
-			// aapt resource value: 0x7f0f0048
-			public const int status_bar_latest_event_content = 2131689544;
+			// aapt resource value: 0x7f0f0049
+			public const int status_bar_latest_event_content = 2131689545;
 			
 			// aapt resource value: 0x7f0f0006
 			public const int tag_transition_group = 2131689478;
@@ -1792,8 +1798,14 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f0008
 			public const int text2 = 2131689480;
 			
-			// aapt resource value: 0x7f0f004e
-			public const int time = 2131689550;
+			// aapt resource value: 0x7f0f005b
+			public const int textViewDate = 2131689563;
+			
+			// aapt resource value: 0x7f0f005c
+			public const int textViewMed = 2131689564;
+			
+			// aapt resource value: 0x7f0f004f
+			public const int time = 2131689551;
 			
 			// aapt resource value: 0x7f0f0009
 			public const int title = 2131689481;
@@ -1816,50 +1828,50 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f0039
 			public const int wearable_support_action_drawer_title = 2131689529;
 			
-			// aapt resource value: 0x7f0f0057
-			public const int wearable_support_confirmation_overlay_image = 2131689559;
-			
 			// aapt resource value: 0x7f0f0058
-			public const int wearable_support_confirmation_overlay_message = 2131689560;
-			
-			// aapt resource value: 0x7f0f0061
-			public const int wearable_support_drawer_view_peek_container = 2131689569;
-			
-			// aapt resource value: 0x7f0f0062
-			public const int wearable_support_drawer_view_peek_icon = 2131689570;
+			public const int wearable_support_confirmation_overlay_image = 2131689560;
 			
 			// aapt resource value: 0x7f0f0059
-			public const int wearable_support_nav_drawer_icon_0 = 2131689561;
+			public const int wearable_support_confirmation_overlay_message = 2131689561;
 			
-			// aapt resource value: 0x7f0f005b
-			public const int wearable_support_nav_drawer_icon_1 = 2131689563;
+			// aapt resource value: 0x7f0f0065
+			public const int wearable_support_drawer_view_peek_container = 2131689573;
 			
-			// aapt resource value: 0x7f0f005c
-			public const int wearable_support_nav_drawer_icon_2 = 2131689564;
+			// aapt resource value: 0x7f0f0066
+			public const int wearable_support_drawer_view_peek_icon = 2131689574;
 			
 			// aapt resource value: 0x7f0f005d
-			public const int wearable_support_nav_drawer_icon_3 = 2131689565;
-			
-			// aapt resource value: 0x7f0f005e
-			public const int wearable_support_nav_drawer_icon_4 = 2131689566;
+			public const int wearable_support_nav_drawer_icon_0 = 2131689565;
 			
 			// aapt resource value: 0x7f0f005f
-			public const int wearable_support_nav_drawer_icon_5 = 2131689567;
+			public const int wearable_support_nav_drawer_icon_1 = 2131689567;
 			
 			// aapt resource value: 0x7f0f0060
-			public const int wearable_support_nav_drawer_icon_6 = 2131689568;
+			public const int wearable_support_nav_drawer_icon_2 = 2131689568;
 			
-			// aapt resource value: 0x7f0f005a
-			public const int wearable_support_nav_drawer_text = 2131689562;
+			// aapt resource value: 0x7f0f0061
+			public const int wearable_support_nav_drawer_icon_3 = 2131689569;
 			
-			// aapt resource value: 0x7f0f0040
-			public const int wearable_support_navigation_drawer_item_icon = 2131689536;
+			// aapt resource value: 0x7f0f0062
+			public const int wearable_support_nav_drawer_icon_4 = 2131689570;
+			
+			// aapt resource value: 0x7f0f0063
+			public const int wearable_support_nav_drawer_icon_5 = 2131689571;
+			
+			// aapt resource value: 0x7f0f0064
+			public const int wearable_support_nav_drawer_icon_6 = 2131689572;
+			
+			// aapt resource value: 0x7f0f005e
+			public const int wearable_support_nav_drawer_text = 2131689566;
 			
 			// aapt resource value: 0x7f0f0041
-			public const int wearable_support_navigation_drawer_item_text = 2131689537;
+			public const int wearable_support_navigation_drawer_item_icon = 2131689537;
 			
 			// aapt resource value: 0x7f0f0042
-			public const int wearable_support_navigation_drawer_page_indicator = 2131689538;
+			public const int wearable_support_navigation_drawer_item_text = 2131689538;
+			
+			// aapt resource value: 0x7f0f0043
+			public const int wearable_support_navigation_drawer_page_indicator = 2131689539;
 			
 			// aapt resource value: 0x7f0f0000
 			public const int wearable_support_navigation_drawer_view_pager = 2131689472;
@@ -1873,59 +1885,59 @@ namespace DrWatch_wearos
 			// aapt resource value: 0x7f0f001c
 			public const int width = 2131689500;
 			
-			// aapt resource value: 0x7f0f0066
-			public const int ws_action_drawer_expand_icon = 2131689574;
-			
-			// aapt resource value: 0x7f0f0063
-			public const int ws_action_drawer_item_icon = 2131689571;
-			
-			// aapt resource value: 0x7f0f0064
-			public const int ws_action_drawer_item_text = 2131689572;
-			
-			// aapt resource value: 0x7f0f0065
-			public const int ws_action_drawer_peek_action_icon = 2131689573;
+			// aapt resource value: 0x7f0f006a
+			public const int ws_action_drawer_expand_icon = 2131689578;
 			
 			// aapt resource value: 0x7f0f0067
-			public const int ws_action_drawer_title = 2131689575;
-			
-			// aapt resource value: 0x7f0f0073
-			public const int ws_drawer_view_peek_container = 2131689587;
-			
-			// aapt resource value: 0x7f0f0074
-			public const int ws_drawer_view_peek_icon = 2131689588;
-			
-			// aapt resource value: 0x7f0f006b
-			public const int ws_nav_drawer_icon_0 = 2131689579;
-			
-			// aapt resource value: 0x7f0f006d
-			public const int ws_nav_drawer_icon_1 = 2131689581;
-			
-			// aapt resource value: 0x7f0f006e
-			public const int ws_nav_drawer_icon_2 = 2131689582;
-			
-			// aapt resource value: 0x7f0f006f
-			public const int ws_nav_drawer_icon_3 = 2131689583;
-			
-			// aapt resource value: 0x7f0f0070
-			public const int ws_nav_drawer_icon_4 = 2131689584;
-			
-			// aapt resource value: 0x7f0f0071
-			public const int ws_nav_drawer_icon_5 = 2131689585;
-			
-			// aapt resource value: 0x7f0f0072
-			public const int ws_nav_drawer_icon_6 = 2131689586;
-			
-			// aapt resource value: 0x7f0f006c
-			public const int ws_nav_drawer_text = 2131689580;
+			public const int ws_action_drawer_item_icon = 2131689575;
 			
 			// aapt resource value: 0x7f0f0068
-			public const int ws_navigation_drawer_item_icon = 2131689576;
+			public const int ws_action_drawer_item_text = 2131689576;
 			
 			// aapt resource value: 0x7f0f0069
-			public const int ws_navigation_drawer_item_text = 2131689577;
+			public const int ws_action_drawer_peek_action_icon = 2131689577;
 			
-			// aapt resource value: 0x7f0f006a
-			public const int ws_navigation_drawer_page_indicator = 2131689578;
+			// aapt resource value: 0x7f0f006b
+			public const int ws_action_drawer_title = 2131689579;
+			
+			// aapt resource value: 0x7f0f0077
+			public const int ws_drawer_view_peek_container = 2131689591;
+			
+			// aapt resource value: 0x7f0f0078
+			public const int ws_drawer_view_peek_icon = 2131689592;
+			
+			// aapt resource value: 0x7f0f006f
+			public const int ws_nav_drawer_icon_0 = 2131689583;
+			
+			// aapt resource value: 0x7f0f0071
+			public const int ws_nav_drawer_icon_1 = 2131689585;
+			
+			// aapt resource value: 0x7f0f0072
+			public const int ws_nav_drawer_icon_2 = 2131689586;
+			
+			// aapt resource value: 0x7f0f0073
+			public const int ws_nav_drawer_icon_3 = 2131689587;
+			
+			// aapt resource value: 0x7f0f0074
+			public const int ws_nav_drawer_icon_4 = 2131689588;
+			
+			// aapt resource value: 0x7f0f0075
+			public const int ws_nav_drawer_icon_5 = 2131689589;
+			
+			// aapt resource value: 0x7f0f0076
+			public const int ws_nav_drawer_icon_6 = 2131689590;
+			
+			// aapt resource value: 0x7f0f0070
+			public const int ws_nav_drawer_text = 2131689584;
+			
+			// aapt resource value: 0x7f0f006c
+			public const int ws_navigation_drawer_item_icon = 2131689580;
+			
+			// aapt resource value: 0x7f0f006d
+			public const int ws_navigation_drawer_item_text = 2131689581;
+			
+			// aapt resource value: 0x7f0f006e
+			public const int ws_navigation_drawer_page_indicator = 2131689582;
 			
 			// aapt resource value: 0x7f0f0002
 			public const int ws_navigation_drawer_view_pager = 2131689474;
@@ -2093,76 +2105,79 @@ namespace DrWatch_wearos
 			public const int overlay_confirmation = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int single_page_nav_drawer_1_item = 2130968602;
+			public const int PerscriptionScheduleView = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int single_page_nav_drawer_2_item = 2130968603;
+			public const int single_page_nav_drawer_1_item = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int single_page_nav_drawer_3_item = 2130968604;
+			public const int single_page_nav_drawer_2_item = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int single_page_nav_drawer_4_item = 2130968605;
+			public const int single_page_nav_drawer_3_item = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int single_page_nav_drawer_5_item = 2130968606;
+			public const int single_page_nav_drawer_4_item = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int single_page_nav_drawer_6_item = 2130968607;
+			public const int single_page_nav_drawer_5_item = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int single_page_nav_drawer_7_item = 2130968608;
+			public const int single_page_nav_drawer_6_item = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int single_page_nav_drawer_peek_view = 2130968609;
+			public const int single_page_nav_drawer_7_item = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int watch_card_content = 2130968610;
+			public const int single_page_nav_drawer_peek_view = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int wearable_drawer_view = 2130968611;
+			public const int watch_card_content = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int ws_action_drawer_item_view = 2130968612;
+			public const int wearable_drawer_view = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int ws_action_drawer_peek_view = 2130968613;
+			public const int ws_action_drawer_item_view = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int ws_action_drawer_title_view = 2130968614;
+			public const int ws_action_drawer_peek_view = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int ws_navigation_drawer_item_view = 2130968615;
+			public const int ws_action_drawer_title_view = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int ws_navigation_drawer_view = 2130968616;
+			public const int ws_navigation_drawer_item_view = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int ws_single_page_nav_drawer_1_item = 2130968617;
+			public const int ws_navigation_drawer_view = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int ws_single_page_nav_drawer_2_item = 2130968618;
+			public const int ws_single_page_nav_drawer_1_item = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int ws_single_page_nav_drawer_3_item = 2130968619;
+			public const int ws_single_page_nav_drawer_2_item = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int ws_single_page_nav_drawer_4_item = 2130968620;
+			public const int ws_single_page_nav_drawer_3_item = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int ws_single_page_nav_drawer_5_item = 2130968621;
+			public const int ws_single_page_nav_drawer_4_item = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int ws_single_page_nav_drawer_6_item = 2130968622;
+			public const int ws_single_page_nav_drawer_5_item = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int ws_single_page_nav_drawer_7_item = 2130968623;
+			public const int ws_single_page_nav_drawer_6_item = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int ws_single_page_nav_drawer_peek_view = 2130968624;
+			public const int ws_single_page_nav_drawer_7_item = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int ws_wearable_drawer_view = 2130968625;
+			public const int ws_single_page_nav_drawer_peek_view = 2130968625;
+			
+			// aapt resource value: 0x7f040032
+			public const int ws_wearable_drawer_view = 2130968626;
 			
 			static Layout()
 			{
