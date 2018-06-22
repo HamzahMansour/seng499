@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+    android:id="@+id/bottomBarSchedule"
+    android:icon="@drawable/ic_schedule"
+    android:title="Schedule" />
+  <item
+    android:id="@+id/bottomBarPrescriptions"
+    android:icon="@drawable/ic_prescriptions"
+    android:title="Prescriptions" />
+  <item
+      android:id="@+id/bottomBarAnalytics"
+      android:icon="@drawable/ic_analytics"
+      android:title="Analytics" />
+  <item
+    android:id="@+id/bottomBarSettings"
+    android:icon="@drawable/ic_settings"
+    android:title="Settings" />
+</menu>

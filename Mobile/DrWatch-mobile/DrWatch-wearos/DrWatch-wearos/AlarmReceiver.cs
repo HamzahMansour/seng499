@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Media;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V4.Content.Res;
@@ -32,6 +33,15 @@ namespace DrWatch_wearos
             int notificationId = 001;
             // The channel ID of the notification.
             String id = "my_channel_01";
+
+            // sound the alarm
+            var alert = RingtoneManager.GetDefaultUri(RingtoneType.Alarm);
+            var _mediap = MediaPlayer.Create(context, alert);
+
+            AudioManager audioM = (AudioManager)context.GetSystemService(Context.AudioService);
+            if (audioM.GetStreamVolume(Stream.Alarm) != 0) {
+                _mediap.Start();
+            }
 
             NotificationManager notificationManager = (NotificationManager) context.GetSystemService(Context.NotificationService);
 
