@@ -33,7 +33,7 @@ namespace DrWatch_android
             };
 
             Button addPerscriptionButton = (Button)FindViewById(Resource.Id.plusbtn);
-            addPerscriptionButton.Click += popupModalNew;
+            addPerscriptionButton.Click += Perscription;
 
         }
 
@@ -61,11 +61,11 @@ namespace DrWatch_android
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
         }
 
-        private void popupModalNew(object sender, EventArgs eventArgs)
+        private void Perscription(object sender, EventArgs eventArgs)
         {
-            var alert = new Android.App.AlertDialog.Builder(this);
-            alert.SetView(LayoutInflater.Inflate(Resource.Layout.NewEditPerscription, null));
-            alert.Create().Show();
+            Intent myIntent = new Intent(this, typeof(PerscriptionActivity));
+            // myIntent.PutExtra("key", value)
+            this.StartActivity(myIntent);
         }
 	}
 }

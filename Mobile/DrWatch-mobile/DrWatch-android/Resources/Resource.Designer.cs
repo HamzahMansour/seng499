@@ -105,6 +105,22 @@ namespace DrWatch_android
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0e0000
+			public const int spinnerItems = 2131623936;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -3161,8 +3177,8 @@ namespace DrWatch_android
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f0e0000
-			public const int menu_main = 2131623936;
+			// aapt resource value: 0x7f0f0000
+			public const int menu_main = 2131689472;
 			
 			static Menu()
 			{
