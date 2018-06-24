@@ -60,8 +60,8 @@ namespace DrWatch_wearos
 
         //public PendingIntent GetPendingIntent() {
         //    Intent urlIntent = new Intent(Intent.ActionSend);
-        //    Uri uri = new Uri("http://www.google.com");
-
+        //    Uri uri = new Uri("http://localhost/");
+        //
         //}
     }
 }

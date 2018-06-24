@@ -32,6 +32,9 @@ namespace DrWatch_android
                 StartActivity(intent);
             };
 
+            Button addPerscriptionButton = (Button)FindViewById(Resource.Id.plusbtn);
+            addPerscriptionButton.Click += popupModalNew;
+
         }
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
@@ -56,6 +59,13 @@ namespace DrWatch_android
             View view = (View) sender;
             Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+        }
+
+        private void popupModalNew(object sender, EventArgs eventArgs)
+        {
+            var alert = new Android.App.AlertDialog.Builder(this);
+            alert.SetView(LayoutInflater.Inflate(Resource.Layout.NewEditPerscription, null));
+            alert.Create().Show();
         }
 	}
 }
