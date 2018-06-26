@@ -6,13 +6,6 @@
     android:background="#ffffff"
     android:minWidth="25px"
     android:minHeight="25px">
-    <TextView
-        android:text="Perscription"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/title"
-        android:padding="5dp" />
     <AutoCompleteTextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -23,19 +16,85 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/spinnerItems" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <Button
+            android:text="Add Time"
+            android:textSize="6pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPerscriptionTime"
+            android:gravity="center"
+            android:layout_marginTop="0dp" />
+        <Button
+            android:text="Delete"
+            android:enabled="false"
+            android:textSize="6pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDeleteSelectedPerscriptionTime"
+            android:gravity="center"
+            android:layout_marginTop="0dp" />
+    </LinearLayout>
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/add_intervals"
+        android:choiceMode="multipleChoice"
         android:scrollbars="vertical" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <Button
+            android:text="@string/perscription_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/perscriptionStartTime" />
+        <Button
+            android:text="@string/perscription_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/perscriptionEndTime" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtStartTime" />
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtEndTime" />
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/formselect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinnerForm" />
+    <Spinner
+        android:id="@+id/instructionselect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinnerInst" />
     <EditText
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtLastName"
+        android:id="@+id/txtDosage"
         android:ellipsize="none"
         android:gravity="fill_horizontal"
-        android:hint="Last Name"
+        android:hint="Dosage"
         android:layout_gravity="center_horizontal"
         android:textColor="#000000" />
     <LinearLayout
@@ -45,7 +104,7 @@
         android:background="#ffffff">
         <Button
             android:text="Cancel"
-            android:textSize="6pt"
+            android:textSize="4pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnPerscriptionCancel"
@@ -54,7 +113,7 @@
             android:textColor="#000" />
         <Button
             android:text="Save"
-            android:textSize="6pt"
+            android:textSize="4pt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnPerscriptionSave"

@@ -1,8 +1,21 @@
 ﻿<resources>
   <string-array name="spinnerItems">
     <item>Daily</item>
-    <item>Weekly</item>
+    <!--item>Weekly</item-->
     <item>Monthly</item>
     <item>Yearly</item>
+  </string-array>
+  <string-array name="spinnerForm">
+    <item>Pill</item>
+    <item>Capsule</item>
+    <item>Patch</item>
+    <item>Liquid</item>
+    <item>Injection</item>
+  </string-array>
+  <string-array name="spinnerInst">
+    <item>None</item>
+    <item>Food</item>
+    <item>Drink</item>
+    <item>Food and Drink</item>
   </string-array>
 </resources>
