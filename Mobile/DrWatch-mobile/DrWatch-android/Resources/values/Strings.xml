@@ -3,6 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="testapiquery_text">Test API Query</string>
     <string name="queryapi">QueryAPI</string>
-    <string name="perscription_start">Start time</string>
-    <string name="perscription_end">End time</string>
+    <string name="perscription_start">Start Date</string>
+    <string name="perscription_end">End Date</string>
 </resources>

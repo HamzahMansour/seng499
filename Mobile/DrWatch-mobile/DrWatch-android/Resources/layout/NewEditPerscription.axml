@@ -39,43 +39,60 @@
             android:gravity="center"
             android:layout_marginTop="0dp" />
     </LinearLayout>
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/add_intervals"
-        android:choiceMode="multipleChoice"
-        android:scrollbars="vertical" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#ffffff">
-        <Button
-            android:text="@string/perscription_start"
+        <EditText
+            android:inputType="date"
+            android:hint="mm/dd"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/perscriptionStartTime" />
-        <Button
-            android:text="@string/perscription_end"
+            android:id="@+id/txtIntervalDate" />
+        <EditText
+            android:inputType="time"
+            android:hint="hh:mm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtIntervalStart" />
+        <EditText
+            android:inputType="time"
+            android:hint="hh:mm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/perscriptionEndTime" />
+            android:id="@+id/txtIntervalEnd" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="#ffffff">
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_intervals"
+            android:choiceMode="multipleChoice"
+            android:scrollbars="vertical" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#ffffff">
-        <TextView
-            android:text=""
+        <EditText
+            android:inputType="date"
+            android:hint="@string/perscription_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtStartTime" />
-        <TextView
-            android:text=""
+            android:id="@+id/perscriptionStartTime" />
+        <EditText
+            android:inputType="date"
+            android:hint="@string/perscription_end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtEndTime" />
+            android:id="@+id/perscriptionEndTime" />
     </LinearLayout>
     <Spinner
         android:id="@+id/formselect"
