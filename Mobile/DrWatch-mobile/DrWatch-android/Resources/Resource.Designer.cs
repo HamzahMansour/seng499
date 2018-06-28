@@ -1818,6 +1818,28 @@ namespace DrWatch_android
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0e0001
+			public const int spinnerForm = 2131623937;
+			
+			// aapt resource value: 0x7f0e0002
+			public const int spinnerInst = 2131623938;
+			
+			// aapt resource value: 0x7f0e0000
+			public const int spinnerItems = 2131623936;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -3970,26 +3992,26 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02006f
-			public const int avd_hide_password_1 = 2130837615;
-			
 			// aapt resource value: 0x7f020070
-			public const int avd_hide_password_2 = 2130837616;
+			public const int avd_hide_password_1 = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int avd_hide_password_3 = 2130837617;
+			public const int avd_hide_password_2 = 2130837617;
+			
+			// aapt resource value: 0x7f020072
+			public const int avd_hide_password_3 = 2130837618;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020072
-			public const int avd_show_password_1 = 2130837618;
-			
 			// aapt resource value: 0x7f020073
-			public const int avd_show_password_2 = 2130837619;
+			public const int avd_show_password_1 = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int avd_show_password_3 = 2130837620;
+			public const int avd_show_password_2 = 2130837620;
+			
+			// aapt resource value: 0x7f020075
+			public const int avd_show_password_3 = 2130837621;
 			
 			// aapt resource value: 0x7f020055
 			public const int bb_bottom_bar_top_shadow = 2130837589;
@@ -4051,11 +4073,11 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f020068
 			public const int notification_icon_background = 2130837608;
 			
-			// aapt resource value: 0x7f02006d
-			public const int notification_template_icon_bg = 2130837613;
-			
 			// aapt resource value: 0x7f02006e
-			public const int notification_template_icon_low_bg = 2130837614;
+			public const int notification_template_icon_bg = 2130837614;
+			
+			// aapt resource value: 0x7f02006f
+			public const int notification_template_icon_low_bg = 2130837615;
 			
 			// aapt resource value: 0x7f020069
 			public const int notification_tile_bg = 2130837609;
@@ -4064,10 +4086,13 @@ namespace DrWatch_android
 			public const int notify_panel_notification_icon_bg = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int tooltip_frame_dark = 2130837611;
+			public const int plusbutton = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int tooltip_frame_light = 2130837612;
+			public const int tooltip_frame_dark = 2130837612;
+			
+			// aapt resource value: 0x7f02006d
+			public const int tooltip_frame_light = 2130837613;
 			
 			static Drawable()
 			{
@@ -4103,8 +4128,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080037
 			public const int SYM = 2131230775;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int action0 = 2131230888;
+			// aapt resource value: 0x7f0800b8
+			public const int action0 = 2131230904;
 			
 			// aapt resource value: 0x7f08007c
 			public const int action_bar = 2131230844;
@@ -4127,17 +4152,17 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f08005a
 			public const int action_bar_title = 2131230810;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int action_container = 2131230885;
+			// aapt resource value: 0x7f0800b5
+			public const int action_container = 2131230901;
 			
 			// aapt resource value: 0x7f08007d
 			public const int action_context_bar = 2131230845;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int action_divider = 2131230892;
+			// aapt resource value: 0x7f0800bc
+			public const int action_divider = 2131230908;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int action_image = 2131230886;
+			// aapt resource value: 0x7f0800b6
+			public const int action_image = 2131230902;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -4154,20 +4179,23 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f0800c3
-			public const int action_settings = 2131230915;
+			// aapt resource value: 0x7f0800d3
+			public const int action_settings = 2131230931;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int action_text = 2131230887;
+			// aapt resource value: 0x7f0800b7
+			public const int action_text = 2131230903;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int actions = 2131230901;
+			// aapt resource value: 0x7f0800c5
+			public const int actions = 2131230917;
 			
 			// aapt resource value: 0x7f08005d
 			public const int activity_chooser_view_content = 2131230813;
 			
 			// aapt resource value: 0x7f080027
 			public const int add = 2131230759;
+			
+			// aapt resource value: 0x7f0800ad
+			public const int add_intervals = 2131230893;
 			
 			// aapt resource value: 0x7f080070
 			public const int alertTitle = 2131230832;
@@ -4183,6 +4211,9 @@ namespace DrWatch_android
 			
 			// aapt resource value: 0x7f080044
 			public const int auto = 2131230788;
+			
+			// aapt resource value: 0x7f0800a6
+			public const int autoCompletePerscription = 2131230886;
 			
 			// aapt resource value: 0x7f080091
 			public const int bb_bottom_bar_background_overlay = 2131230865;
@@ -4220,23 +4251,35 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
-			// aapt resource value: 0x7f0800c2
-			public const int bottomBarItemFour = 2131230914;
+			// aapt resource value: 0x7f0800d1
+			public const int bottomBarAnalytics = 2131230929;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int bottomBarItemOne = 2131230911;
+			// aapt resource value: 0x7f0800d0
+			public const int bottomBarPrescriptions = 2131230928;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int bottomBarItemThree = 2131230913;
+			// aapt resource value: 0x7f0800cf
+			public const int bottomBarSchedule = 2131230927;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int bottomBarItemTwo = 2131230912;
+			// aapt resource value: 0x7f0800d2
+			public const int bottomBarSettings = 2131230930;
+			
+			// aapt resource value: 0x7f0800a9
+			public const int btnDeleteSelectedPerscriptionTime = 2131230889;
+			
+			// aapt resource value: 0x7f0800b3
+			public const int btnPerscriptionCancel = 2131230899;
+			
+			// aapt resource value: 0x7f0800b4
+			public const int btnPerscriptionSave = 2131230900;
+			
+			// aapt resource value: 0x7f0800a8
+			public const int btnPerscriptionTime = 2131230888;
 			
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int cancel_action = 2131230889;
+			// aapt resource value: 0x7f0800b9
+			public const int cancel_action = 2131230905;
 			
 			// aapt resource value: 0x7f080045
 			public const int center = 2131230789;
@@ -4250,8 +4293,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080073
 			public const int checkbox = 2131230835;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int chronometer = 2131230897;
+			// aapt resource value: 0x7f0800c1
+			public const int chronometer = 2131230913;
 			
 			// aapt resource value: 0x7f08004e
 			public const int clip_horizontal = 2131230798;
@@ -4262,14 +4305,14 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080039
 			public const int collapseActionView = 2131230777;
 			
-			// aapt resource value: 0x7f080099
-			public const int container = 2131230873;
+			// aapt resource value: 0x7f08009a
+			public const int container = 2131230874;
 			
 			// aapt resource value: 0x7f080066
 			public const int contentPanel = 2131230822;
 			
-			// aapt resource value: 0x7f08009a
-			public const int coordinator = 2131230874;
+			// aapt resource value: 0x7f08009b
+			public const int coordinator = 2131230875;
 			
 			// aapt resource value: 0x7f08006d
 			public const int custom = 2131230829;
@@ -4283,20 +4326,20 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080060
 			public const int default_activity_button = 2131230816;
 			
-			// aapt resource value: 0x7f08009c
-			public const int design_bottom_sheet = 2131230876;
+			// aapt resource value: 0x7f08009d
+			public const int design_bottom_sheet = 2131230877;
+			
+			// aapt resource value: 0x7f0800a4
+			public const int design_menu_item_action_area = 2131230884;
 			
 			// aapt resource value: 0x7f0800a3
-			public const int design_menu_item_action_area = 2131230883;
+			public const int design_menu_item_action_area_stub = 2131230883;
 			
 			// aapt resource value: 0x7f0800a2
-			public const int design_menu_item_action_area_stub = 2131230882;
+			public const int design_menu_item_text = 2131230882;
 			
 			// aapt resource value: 0x7f0800a1
-			public const int design_menu_item_text = 2131230881;
-			
-			// aapt resource value: 0x7f0800a0
-			public const int design_navigation_view = 2131230880;
+			public const int design_navigation_view = 2131230881;
 			
 			// aapt resource value: 0x7f080020
 			public const int disableHome = 2131230752;
@@ -4307,8 +4350,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080030
 			public const int end = 2131230768;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int end_padder = 2131230903;
+			// aapt resource value: 0x7f0800c7
+			public const int end_padder = 2131230919;
 			
 			// aapt resource value: 0x7f08003f
 			public const int enterAlways = 2131230783;
@@ -4343,6 +4386,9 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
 			
+			// aapt resource value: 0x7f0800b0
+			public const int formselect = 2131230896;
+			
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
 			
@@ -4355,8 +4401,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080062
 			public const int icon = 2131230818;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int icon_group = 2131230902;
+			// aapt resource value: 0x7f0800c6
+			public const int icon_group = 2131230918;
 			
 			// aapt resource value: 0x7f08003a
 			public const int ifRoom = 2131230778;
@@ -4364,8 +4410,14 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int info = 2131230898;
+			// aapt resource value: 0x7f0800c2
+			public const int info = 2131230914;
+			
+			// aapt resource value: 0x7f0800b1
+			public const int instructionselect = 2131230897;
+			
+			// aapt resource value: 0x7f0800a7
+			public const int intervalselect = 2131230887;
 			
 			// aapt resource value: 0x7f080059
 			public const int italic = 2131230809;
@@ -4373,8 +4425,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f080098
-			public const int largeLabel = 2131230872;
+			// aapt resource value: 0x7f080099
+			public const int largeLabel = 2131230873;
 			
 			// aapt resource value: 0x7f080049
 			public const int left = 2131230793;
@@ -4391,17 +4443,17 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800be
-			public const int masked = 2131230910;
+			// aapt resource value: 0x7f0800ce
+			public const int masked = 2131230926;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int media_actions = 2131230891;
+			// aapt resource value: 0x7f0800bb
+			public const int media_actions = 2131230907;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int medicationBrandText = 2131230904;
+			// aapt resource value: 0x7f0800c8
+			public const int medicationBrandText = 2131230920;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int message = 2131230908;
+			// aapt resource value: 0x7f0800cc
+			public const int message = 2131230924;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -4412,8 +4464,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
 			
-			// aapt resource value: 0x7f08009f
-			public const int navigation_header_container = 2131230879;
+			// aapt resource value: 0x7f0800a0
+			public const int navigation_header_container = 2131230880;
 			
 			// aapt resource value: 0x7f08003b
 			public const int never = 2131230779;
@@ -4424,14 +4476,14 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f08001e
 			public const int normal = 2131230750;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int notification_background = 2131230900;
+			// aapt resource value: 0x7f0800c4
+			public const int notification_background = 2131230916;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int notification_main_column = 2131230894;
+			// aapt resource value: 0x7f0800be
+			public const int notification_main_column = 2131230910;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int notification_main_column_container = 2131230893;
+			// aapt resource value: 0x7f0800bd
+			public const int notification_main_column_container = 2131230909;
 			
 			// aapt resource value: 0x7f08004c
 			public const int parallax = 2131230796;
@@ -4442,11 +4494,20 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f08000b
 			public const int parent_matrix = 2131230731;
 			
+			// aapt resource value: 0x7f0800af
+			public const int perscriptionEndTime = 2131230895;
+			
+			// aapt resource value: 0x7f0800ae
+			public const int perscriptionStartTime = 2131230894;
+			
 			// aapt resource value: 0x7f08004d
 			public const int pin = 2131230797;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int progressBar = 2131230906;
+			// aapt resource value: 0x7f080097
+			public const int plusbtn = 2131230871;
+			
+			// aapt resource value: 0x7f0800ca
+			public const int progressBar = 2131230922;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
@@ -4454,23 +4515,23 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080007
 			public const int progress_horizontal = 2131230727;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int queryButton = 2131230905;
+			// aapt resource value: 0x7f0800c9
+			public const int queryButton = 2131230921;
 			
 			// aapt resource value: 0x7f080075
 			public const int radio = 2131230837;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int responseView = 2131230907;
+			// aapt resource value: 0x7f0800cb
+			public const int responseView = 2131230923;
 			
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int right_icon = 2131230899;
+			// aapt resource value: 0x7f0800c3
+			public const int right_icon = 2131230915;
 			
-			// aapt resource value: 0x7f0800af
-			public const int right_side = 2131230895;
+			// aapt resource value: 0x7f0800bf
+			public const int right_side = 2131230911;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -4544,14 +4605,14 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080025
 			public const int showTitle = 2131230757;
 			
-			// aapt resource value: 0x7f080097
-			public const int smallLabel = 2131230871;
+			// aapt resource value: 0x7f080098
+			public const int smallLabel = 2131230872;
+			
+			// aapt resource value: 0x7f08009f
+			public const int snackbar_action = 2131230879;
 			
 			// aapt resource value: 0x7f08009e
-			public const int snackbar_action = 2131230878;
-			
-			// aapt resource value: 0x7f08009d
-			public const int snackbar_text = 2131230877;
+			public const int snackbar_text = 2131230878;
 			
 			// aapt resource value: 0x7f080043
 			public const int snap = 2131230787;
@@ -4574,8 +4635,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f08004b
 			public const int start = 2131230795;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int status_bar_latest_event_content = 2131230890;
+			// aapt resource value: 0x7f0800ba
+			public const int status_bar_latest_event_content = 2131230906;
 			
 			// aapt resource value: 0x7f080076
 			public const int submenuarrow = 2131230838;
@@ -4601,8 +4662,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080069
 			public const int textSpacerNoTitle = 2131230825;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int text_input_password_toggle = 2131230884;
+			// aapt resource value: 0x7f0800a5
+			public const int text_input_password_toggle = 2131230885;
 			
 			// aapt resource value: 0x7f080014
 			public const int textinput_counter = 2131230740;
@@ -4610,8 +4671,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080015
 			public const int textinput_error = 2131230741;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int time = 2131230896;
+			// aapt resource value: 0x7f0800c0
+			public const int time = 2131230912;
 			
 			// aapt resource value: 0x7f08001c
 			public const int title = 2131230748;
@@ -4631,8 +4692,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f08006e
 			public const int topPanel = 2131230830;
 			
-			// aapt resource value: 0x7f08009b
-			public const int touch_outside = 2131230875;
+			// aapt resource value: 0x7f08009c
+			public const int touch_outside = 2131230876;
 			
 			// aapt resource value: 0x7f08000f
 			public const int transition_current_scene = 2131230735;
@@ -4649,6 +4710,18 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080013
 			public const int transition_transform = 2131230739;
 			
+			// aapt resource value: 0x7f0800b2
+			public const int txtDosage = 2131230898;
+			
+			// aapt resource value: 0x7f0800aa
+			public const int txtIntervalDate = 2131230890;
+			
+			// aapt resource value: 0x7f0800ac
+			public const int txtIntervalEnd = 2131230892;
+			
+			// aapt resource value: 0x7f0800ab
+			public const int txtIntervalStart = 2131230891;
+			
 			// aapt resource value: 0x7f08002d
 			public const int uniform = 2131230765;
 			
@@ -4661,8 +4734,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int visible = 2131230909;
+			// aapt resource value: 0x7f0800cd
+			public const int visible = 2131230925;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -4868,67 +4941,70 @@ namespace DrWatch_android
 			public const int design_text_input_password_icon = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_action = 2130968623;
+			public const int NewEditPerscription = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_action_tombstone = 2130968624;
+			public const int notification_action = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_media_action = 2130968625;
+			public const int notification_action_tombstone = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_media_cancel_action = 2130968626;
+			public const int notification_media_action = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_big_media = 2130968627;
+			public const int notification_media_cancel_action = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media_custom = 2130968628;
+			public const int notification_template_big_media = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_big_media_narrow = 2130968629;
+			public const int notification_template_big_media_custom = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_big_media_narrow_custom = 2130968630;
+			public const int notification_template_big_media_narrow = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_custom_big = 2130968631;
+			public const int notification_template_big_media_narrow_custom = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_icon_group = 2130968632;
+			public const int notification_template_custom_big = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_lines_media = 2130968633;
+			public const int notification_template_icon_group = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_media = 2130968634;
+			public const int notification_template_lines_media = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_media_custom = 2130968635;
+			public const int notification_template_media = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int notification_template_part_chronometer = 2130968636;
+			public const int notification_template_media_custom = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int notification_template_part_time = 2130968637;
+			public const int notification_template_part_chronometer = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int select_dialog_item_material = 2130968638;
+			public const int notification_template_part_time = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int select_dialog_multichoice_material = 2130968639;
+			public const int select_dialog_item_material = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int select_dialog_singlechoice_material = 2130968640;
+			public const int select_dialog_multichoice_material = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int support_simple_spinner_dropdown_item = 2130968641;
+			public const int select_dialog_singlechoice_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int TestAPIQuery = 2130968642;
+			public const int support_simple_spinner_dropdown_item = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int tooltip = 2130968643;
+			public const int TestAPIQuery = 2130968643;
+			
+			// aapt resource value: 0x7f040044
+			public const int tooltip = 2130968644;
 			
 			static Layout()
 			{
@@ -4943,11 +5019,11 @@ namespace DrWatch_android
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f0e0000
-			public const int menu_bottombar = 2131623936;
+			// aapt resource value: 0x7f0f0000
+			public const int menu_bottombar = 2131689472;
 			
-			// aapt resource value: 0x7f0e0001
-			public const int menu_main = 2131623937;
+			// aapt resource value: 0x7f0f0001
+			public const int menu_main = 2131689473;
 			
 			static Menu()
 			{
@@ -5100,6 +5176,12 @@ namespace DrWatch_android
 			
 			// aapt resource value: 0x7f090025
 			public const int path_password_strike_through = 2131296293;
+			
+			// aapt resource value: 0x7f09002c
+			public const int perscription_end = 2131296300;
+			
+			// aapt resource value: 0x7f09002b
+			public const int perscription_start = 2131296299;
 			
 			// aapt resource value: 0x7f09002a
 			public const int queryapi = 2131296298;

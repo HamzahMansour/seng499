@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -110,8 +111,8 @@ namespace DrWatch_android
                     tmp.AppendFormat("Date {0} ", date.EditableText.ToString().Split('/')[1]);
             }
 
-            r = new Regex("^([0-1][0-9])|(2[0-3]):[0-5][0-9]");
-            if (!r.IsMatch(start.EditableText.ToString()) | !r.IsMatch(end.EditableText.ToString()))
+            r = new Regex("^(([0-1][0-9])|(2[0-3])):[0-5][0-9]");
+            if (!r.IsMatch(start.EditableText.ToString()) || !r.IsMatch(end.EditableText.ToString()))
             {
                 error = Toast.MakeText(this, "incorrect format for time should be hh:mm", ToastLength.Long);
                 error.Show();
@@ -152,13 +153,99 @@ namespace DrWatch_android
         // submit our data to the database, sinc to the watch and exit
         private void saveOnClick(object sender, EventArgs e)
         {
+            // gather all data (excluding list data)
+            string perscription = ((AutoCompleteTextView)FindViewById(Resource.Id.autoCompletePerscription)).Text;
+            string startDate = ((EditText)FindViewById(Resource.Id.perscriptionStartTime)).Text;
+            string endDate = ((EditText)FindViewById(Resource.Id.perscriptionEndTime)).Text;
+            string dosage = ((EditText)FindViewById(Resource.Id.txtDosage)).Text;
+            string form = (string)((Spinner)FindViewById(Resource.Id.formselect)).SelectedItem;
+            string takewith = (string)((Spinner)FindViewById(Resource.Id.instructionselect)).SelectedItem;
+            string Interval = (string)((Spinner)FindViewById(Resource.Id.intervalselect)).SelectedItem;
 
-            HttpClient httpclient = new HttpClient();
+            // validate data (excluding list data) already validated
+            Regex r = new Regex("^[0-9][0-9]/(0[0-9])|(1[0-2])/([0-2][0-9])|(3[0-1])");
+            bool error_occured = false;
+            StringBuilder error = new StringBuilder("Incorrect/missing inputs for ");
+            if (!r.IsMatch(startDate)) {
+                error_occured = true;
+                error.AppendFormat("{0} ", Resource.String.perscription_start);
+            }
+            if (endDate.Length > 0 && !r.IsMatch(endDate))
+            {
+                error_occured = true;
+                error.AppendFormat("{0} ", Resource.String.perscription_end);
+            }
+            if (perscription.Length == 0)
+            {
+                error_occured = true;
+                error.Append("Perscription ");
+            }
+            if (dosage.Length == 0 || decimal.Parse(dosage) == 0)
+            {
+                error_occured = true;
+                error.Append("Dosage ");
+            }
+            if (intervalAdapter.Count == 0) {
+                error_occured = true;
+                error.Append("Intervals ");
+            }
+
+            if (error_occured) {
+                Toast tost = Toast.MakeText(this, error.ToString(), ToastLength.Long);
+                tost.Show();
+                return;
+            }
+
+            StringBuilder sb = new StringBuilder();
+            StringWriter sw = new StringWriter(sb);
+            using (JsonWriter writer = new JsonTextWriter(sw)) {
+                writer.Formatting = Formatting.Indented;
+
+                writer.WriteStartObject();
+                writer.WritePropertyName("user");
+                writer.WriteValue("temp@gmail.com");// temporary until google authentication complete
+                writer.WritePropertyName("perscription");
+                writer.WriteValue(perscription);
+                writer.WritePropertyName("start_date");
+                writer.WriteValue(startDate);
+                writer.WritePropertyName("end_date");
+                writer.WriteValue(endDate);
+                writer.WritePropertyName("dosage");
+                writer.WriteValue(dosage);
+                writer.WritePropertyName("form");
+                writer.WriteValue(form);
+                writer.WritePropertyName("take_with");
+                writer.WriteValue(takewith);
+                writer.WritePropertyName("Interval");
+                writer.WriteValue(Interval);
+                writer.WritePropertyName("Intervals");
+                writer.WriteStartArray();
+                for (int x = 0; x < intervalAdapter.Count; x++) {
+                    writer.WriteValue(intervalAdapter.GetItem(x));
+                }
+                writer.WriteEnd();
+                writer.WriteEndObject();
+            }
+
+            // nowhere to send to yet
+            //sendRequest(sb.ToString());
 
             // exit
             Intent i = new Intent(this, typeof(MainActivity));
             i.SetFlags(ActivityFlags.ClearTop);
             StartActivity(i);
+        }
+
+        private async void sendRequest(string str)
+        {
+            HttpClient httpclient = new HttpClient();
+
+            httpclient.BaseAddress = new Uri("http://web.uvic.ca/~rsaujla:8080"); // wherever the server will 
+
+            // get content and post request
+            var content = new StringContent(str, System.Text.Encoding.UTF8, "application/json");
+            var result = await httpclient.PostAsync("/test", content);
+            string resultContent = await result.Content.ReadAsStringAsync();
         }
     }
 }
