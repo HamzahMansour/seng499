@@ -79,8 +79,8 @@ namespace DrWatch_android
         // get our data from the api, or from saved (depending on how we want to do it
         private async Task<List<string>> GetPerscriptions()
         {
-            string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json";
-            string jsonString = await FetchMedicationAsync(url);
+            //string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json";
+            //string jsonString = await FetchMedicationAsync(url);
             List<string> allBrands = new List<string>{"Brand1", "Brand2", "Brand3"};
             return allBrands;
         }
