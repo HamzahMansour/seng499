@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Json;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -35,7 +37,7 @@ namespace DrWatch_android
 
             //intent intent = getIntent();
             //String value = intent.getStringExtra("key") to receive something from activity start
-            List<string> PerscriptionNames = GetPerscriptions();
+            List<string> PerscriptionNames = GetPerscriptions().Result;
             AutoCompleteTextView perscription = (AutoCompleteTextView)FindViewById(Resource.Id.autoCompletePerscription);
             perscriptionAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, PerscriptionNames);
             perscription.Adapter = perscriptionAdapter;
@@ -75,9 +77,38 @@ namespace DrWatch_android
         }
 
         // get our data from the api, or from saved (depending on how we want to do it
-        private List<string> GetPerscriptions()
+        private async Task<List<string>> GetPerscriptions()
         {
-            throw new NotImplementedException();
+            string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json";
+            string jsonString = await FetchMedicationAsync(url);
+            List<string> allBrands = new List<string>{"Brand1", "Brand2", "Brand3"};
+            return allBrands;
+        }
+
+        private async Task<string> FetchMedicationAsync(string url)
+        {
+            //Create HTTP request using the URL
+            System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(new Uri(url));
+            request.ContentType = "application/json";
+            request.Method = "GET";
+
+            //Send the request ot the server and wait for the response
+            //TODO: Add exception handling to web queries and Json parsing
+            using (System.Net.WebResponse response = await request.GetResponseAsync())
+            {
+                //Get a stream representation of the HTTP web response
+                using (System.IO.Stream stream = response.GetResponseStream())
+                {
+                    //Use this stream to build a JSON document object:
+                    JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
+                    Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
+
+                    //Return the JSON document
+                    return jsonDoc.ToString();
+                }
+
+            }
+
         }
 
         // select list item from interval list
