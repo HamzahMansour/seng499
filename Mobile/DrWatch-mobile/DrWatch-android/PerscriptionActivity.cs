@@ -28,7 +28,7 @@ namespace DrWatch_android
         List<int> checkedIntervals = new List<int>();
         Spinner intervalSelection;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
@@ -37,7 +37,7 @@ namespace DrWatch_android
 
             //intent intent = getIntent();
             //String value = intent.getStringExtra("key") to receive something from activity start
-            List<string> PerscriptionNames = GetPerscriptions().Result;
+            List<string> PerscriptionNames = await GetPerscriptions();
             AutoCompleteTextView perscription = (AutoCompleteTextView)FindViewById(Resource.Id.autoCompletePerscription);
             perscriptionAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, PerscriptionNames);
             perscription.Adapter = perscriptionAdapter;
@@ -79,9 +79,10 @@ namespace DrWatch_android
         // get our data from the api, or from saved (depending on how we want to do it
         private async Task<List<string>> GetPerscriptions()
         {
-            //string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json";
-            //string jsonString = await FetchMedicationAsync(url);
-            List<string> allBrands = new List<string>{"Brand1", "Brand2", "Brand3"};
+            string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json&brandname=advil";
+            string jsonString = await FetchMedicationAsync(url);
+            
+            List<string> allBrands = new List<string> { "Brand1", "Brand2", "Brand3" };
             return allBrands;
         }
 
@@ -92,22 +93,30 @@ namespace DrWatch_android
             request.ContentType = "application/json";
             request.Method = "GET";
 
-            //Send the request ot the server and wait for the response
+            //Send the request to the server and wait for the response
             //TODO: Add exception handling to web queries and Json parsing
-            using (System.Net.WebResponse response = await request.GetResponseAsync())
+            try
             {
-                //Get a stream representation of the HTTP web response
-                using (System.IO.Stream stream = response.GetResponseStream())
+                using (System.Net.WebResponse response = await request.GetResponseAsync())
                 {
-                    //Use this stream to build a JSON document object:
-                    JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
-                    Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
+                    //Get a stream representation of the HTTP web response
+                    using (System.IO.Stream stream = response.GetResponseStream())
+                    {
+                        //Use this stream to build a JSON document object:
+                        JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
 
-                    //Return the JSON document
-                    return jsonDoc.ToString();
+                        //Return the JSON document
+                        return jsonDoc.ToString();
+                    }
+
                 }
-
             }
+            catch(HttpRequestException e)
+            {
+                Console.Out.WriteLine("ERROR: {0}", e);
+                throw;
+            }
+            
 
         }
 
