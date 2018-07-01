@@ -79,7 +79,7 @@ namespace DrWatch_android
         // get our data from the api, or from saved (depending on how we want to do it
         private async Task<List<string>> GetPerscriptions()
         {
-            string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json&brandname=advil";
+            string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json";
             string json = await FetchMedicationAsync(url);
             List<string> allBrands = await ParseBrandNamesFromJson(json);
             return allBrands;
@@ -87,6 +87,7 @@ namespace DrWatch_android
 
         private Task<List<string>> ParseBrandNamesFromJson(string json)
         {
+            //This method parses the Json string for all brand names and returns them in a List<string>.
             JsonTextReader reader = new JsonTextReader(new StringReader(json));
             List<string> allBrands = new List<string>();
             while (reader.Read())
@@ -118,7 +119,7 @@ namespace DrWatch_android
                 {
                     //Get a stream representation of the HTTP web response
                     using (System.IO.Stream stream = response.GetResponseStream())
-                    {
+                    {                        
                         //Use this stream to build a JSON document object:
                         JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
 
