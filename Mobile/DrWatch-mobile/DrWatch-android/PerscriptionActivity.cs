@@ -80,10 +80,27 @@ namespace DrWatch_android
         private async Task<List<string>> GetPerscriptions()
         {
             string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json&brandname=advil";
-            string jsonString = await FetchMedicationAsync(url);
-            
-            List<string> allBrands = new List<string> { "Brand1", "Brand2", "Brand3" };
+            string json = await FetchMedicationAsync(url);
+            List<string> allBrands = await ParseBrandNamesFromJson(json);
             return allBrands;
+        }
+
+        private Task<List<string>> ParseBrandNamesFromJson(string json)
+        {
+            JsonTextReader reader = new JsonTextReader(new StringReader(json));
+            List<string> allBrands = new List<string>();
+            while (reader.Read())
+            {
+                if (reader.Value != null)
+                {
+                    if (reader.Value.ToString().Equals("brand_name"))
+                    {
+                        reader.Read();
+                        allBrands.Add(reader.Value.ToString());
+                    }
+                }
+            }
+            return Task.FromResult(allBrands);
         }
 
         private async Task<string> FetchMedicationAsync(string url)
@@ -104,6 +121,8 @@ namespace DrWatch_android
                     {
                         //Use this stream to build a JSON document object:
                         JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
+
+                        //Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
 
                         //Return the JSON document
                         return jsonDoc.ToString();
