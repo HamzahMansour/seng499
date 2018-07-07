@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Json;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -120,13 +119,22 @@ namespace DrWatch_android
                     //Get a stream representation of the HTTP web response
                     using (System.IO.Stream stream = response.GetResponseStream())
                     {                        
+                        
+                        using (StreamReader streamReader = new StreamReader(stream))
+                        {
+                            string json = await Task.Run(() => streamReader.ReadToEnd());                            
+
+                            //Return the JSON string
+                            return json;
+                        }
+
                         //Use this stream to build a JSON document object:
-                        JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
+                        //JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
 
                         //Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
 
                         //Return the JSON document
-                        return jsonDoc.ToString();
+                        //return jsonDoc.ToString();
                     }
 
                 }

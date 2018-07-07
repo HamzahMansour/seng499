@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Json;
 using System.Threading.Tasks;
+using System.IO;
 
 using Android.App;
 using Android.Content;
@@ -11,6 +11,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 
 namespace DrWatch_android
 {
@@ -33,14 +34,14 @@ namespace DrWatch_android
                 string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json&brandname=" + 
                     BrandText.Text;
 
-                JsonValue json = await FetchMedicationAsync(url);
+                string json = await FetchMedicationAsync(url);
                 // ParseAndDisplay(json);
 
             };
 
         }
 
-        private async Task<JsonValue> FetchMedicationAsync(string url)
+        private async Task<string> FetchMedicationAsync(string url)
         {
             //Create HTTP request using the URL
             System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(new Uri(url));
@@ -54,12 +55,17 @@ namespace DrWatch_android
                 //Get a stream representation of the HTTP web response
                 using (System.IO.Stream stream = response.GetResponseStream())
                 {
-                    //Use this stream to build a JSON document object:
-                    JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
-                    Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
+                    using (StreamReader streamReader = new StreamReader(stream))
+                    {
+                        string json = await Task.Run(() => streamReader.ReadToEnd());
+                        //string json = await Task.Run(() => JsonConvert.ToString(streamText));
 
-                    //Return the JSON document
-                    return jsonDoc;
+                        Console.Out.WriteLine("Result: {0}", json);
+
+                        //Return the JSON document
+                        return json;
+                    }
+                       
                 }
                     
             }
