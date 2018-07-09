@@ -14,12 +14,11 @@ namespace DrWatch_android
 	public class MainActivity : AppCompatActivity, BottomNavigationBar.Listeners.IOnMenuTabClickListener
     {
         private BottomBar _bottomBar;
-
+        
         protected override void OnCreate(Bundle savedInstanceState)
 		{
-			base.OnCreate(savedInstanceState);
-
-			SetContentView(Resource.Layout.activity_main);
+			base.OnCreate(savedInstanceState);            
+            SetContentView(Resource.Layout.activity_main);
 
             _bottomBar = BottomBar.Attach(this, savedInstanceState);
             _bottomBar.SetItems(Resource.Menu.menu_bottombar);
@@ -31,10 +30,17 @@ namespace DrWatch_android
 			FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
 
-            Button btn = (Button)FindViewById(Resource.Id.APIQueryTestButton);
-            btn.Click += delegate
+            Button queryTestButton = (Button)FindViewById(Resource.Id.APIQueryTestButton);
+            queryTestButton.Click += delegate
             {
                 var intent = new Intent(this, typeof(QueryAPI));
+                StartActivity(intent);
+            };
+
+            Button LogTestButton = (Button)FindViewById(Resource.Id.LogInTestButton);
+            LogTestButton.Click += delegate
+            {
+                var intent = new Intent(this, typeof(LogInActivity));
                 StartActivity(intent);
             };
 
