@@ -30,8 +30,6 @@ namespace DrWatch_android
             //When query button is clicked
             TestQueryButton.Click += async (sender, e) =>
             {
-                Console.Out.WriteLine("Button was clicked");
-
                 string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json&brandname=" + 
                     BrandText.Text;
 
