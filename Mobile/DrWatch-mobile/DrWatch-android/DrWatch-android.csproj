@@ -56,16 +56,20 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fragments\AnalyticsFragment.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="GoogleAuthenticator.cs" />
     <Compile Include="GoogleOAuthToken.cs" />
     <Compile Include="IGoogleAuthenticatorDelegate.cs" />
     <Compile Include="LogInActivity.cs" />
     <Compile Include="PerscriptionActivity.cs" />
+    <Compile Include="Fragments\PrescriptionsFragment.cs" />
     <Compile Include="QueryAPI.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Fragments\ScheduleFragment.cs" />
+    <Compile Include="Fragments\SettingsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -155,6 +159,27 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\array.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\schedule.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\prescriptions.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\analytics.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\settings.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidResource Include="Resources\layout\LogIn.axml">
       <SubType>Designer</SubType>

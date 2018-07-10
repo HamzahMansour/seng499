@@ -14,7 +14,11 @@ namespace DrWatch_android
 	public class MainActivity : AppCompatActivity, BottomNavigationBar.Listeners.IOnMenuTabClickListener
     {
         private BottomBar _bottomBar;
-        
+        private Android.Support.V4.App.Fragment scheduleFragment = ScheduleFragment.NewInstance();
+        private Android.Support.V4.App.Fragment prescriptionsFragment = PrescriptionsFragment.NewInstance();
+        private Android.Support.V4.App.Fragment analyticsFragment = AnalyticsFragment.NewInstance();
+        private Android.Support.V4.App.Fragment settingsFragment = SettingsFragment.NewInstance();
+
         protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);            
@@ -60,26 +64,12 @@ namespace DrWatch_android
 
         public void OnMenuTabSelected(int menuItemId)
         {
-            switch (menuItemId)
-            {
-                case(Resource.Id.bottomBarSchedule): //load Schedule fragment
-                    break;
-                case (Resource.Id.bottomBarPrescriptions): //load Prescriptions fragment
-                    break;
-                case (Resource.Id.bottomBarAnalytics): //load Analytics fragment
-                    break;
-                case (Resource.Id.bottomBarSettings): //load Settings fragment
-                    break;
-                default:
-                    break;
-
-            }
-
+            LoadFragment(menuItemId);
         }
 
         public void OnMenuTabReSelected(int menuItemId)
         {
-            throw new NotImplementedException();
+            // not implemented yet :/
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -112,6 +102,35 @@ namespace DrWatch_android
             // myIntent.PutExtra("key", value)
             this.StartActivity(myIntent);
         }
-	}
+
+        private void LoadFragment(int id)
+        {
+            Android.Support.V4.App.Fragment fragment = null;
+            switch (id)
+            {
+                case (Resource.Id.bottomBarSchedule): //load Schedule fragment
+                    fragment = scheduleFragment;
+                    break;
+                case (Resource.Id.bottomBarPrescriptions): //load Prescriptions fragment
+                    fragment = prescriptionsFragment;
+                    break;
+                case (Resource.Id.bottomBarAnalytics): //load Analytics fragment
+                    fragment = analyticsFragment;
+                    break;
+                case (Resource.Id.bottomBarSettings): //load Settings fragment
+                    fragment = settingsFragment;
+                    break;
+            }
+
+            if (fragment == null)
+                return;
+
+            SupportFragmentManager
+                .BeginTransaction()
+                .Replace(Resource.Id.content_main, fragment)
+                .Commit();
+        }
+
+    }
 }
 
