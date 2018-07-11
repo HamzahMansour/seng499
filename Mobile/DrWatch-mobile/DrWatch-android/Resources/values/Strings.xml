@@ -5,4 +5,5 @@
     <string name="queryapi">QueryAPI</string>
     <string name="perscription_start">Start yy/mm/dd</string>
     <string name="perscription_end">End yy/mm/dd</string>
+    <string name="googleLogin">Log in with Google</string>
 </resources>
