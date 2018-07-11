@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="AlarmReceiver.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="NotificationService.cs" />
     <Compile Include="PerscriptionListing.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

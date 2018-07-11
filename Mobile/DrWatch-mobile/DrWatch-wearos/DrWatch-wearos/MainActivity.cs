@@ -22,7 +22,6 @@ namespace DrWatch_wearos
     [Activity(Label = "@string/app_name", MainLauncher = true)]
     public class MainActivity : WearableActivity
     {
-        private TextView _textView;
         private RecyclerView _recycler;
         private RecyclerView.Adapter mAdapter;
         private RecyclerView.LayoutManager mLayoutManager;
@@ -32,8 +31,7 @@ namespace DrWatch_wearos
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.activity_main);
-
-            _textView = FindViewById<TextView>(Resource.Id.text);
+            
             _recycler = FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
             perscription = new PerscriptionListing();
@@ -58,8 +56,6 @@ namespace DrWatch_wearos
 
         //set our alarm with a datetime object
         private void setAlarm(DateTime calendar) {
-            Color c = Color.Red;
-            _textView.SetTextColor(c);
             
             // set my alarm (repeating function taken out)
             Intent intent = new Intent(this, typeof(AlarmReceiver));

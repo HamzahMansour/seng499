@@ -42,9 +42,6 @@ namespace DrWatch_android
                 StartActivity(intent);
             };
 
-            Button addPerscriptionButton = (Button)FindViewById(Resource.Id.plusbtn);
-            addPerscriptionButton.Click += Perscription;
-
         }
 
         protected override void OnSaveInstanceState(Bundle outState)
@@ -90,12 +87,6 @@ namespace DrWatch_android
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
         }
 
-        private void Perscription(object sender, EventArgs eventArgs)
-        {
-            Intent myIntent = new Intent(this, typeof(PerscriptionActivity));
-            // myIntent.PutExtra("key", value)
-            this.StartActivity(myIntent);
-        }
 
         private void LoadFragment(int id)
         {
@@ -124,7 +115,7 @@ namespace DrWatch_android
                 .Replace(Resource.Id.content_main, fragment)
                 .Commit();
         }
-
     }
+
 }
 
