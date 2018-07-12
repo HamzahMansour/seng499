@@ -56,10 +56,13 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GoogleEmail.cs" />
     <Compile Include="Fragments\AnalyticsFragment.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="GoogleAuthenticator.cs" />
+    <Compile Include="GoogleAuthInterceptor.cs" />
     <Compile Include="GoogleOAuthToken.cs" />
+    <Compile Include="GoogleService.cs" />
     <Compile Include="IGoogleAuthenticatorDelegate.cs" />
     <Compile Include="LogInActivity.cs" />
     <Compile Include="PerscriptionActivity.cs" />
@@ -73,7 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>

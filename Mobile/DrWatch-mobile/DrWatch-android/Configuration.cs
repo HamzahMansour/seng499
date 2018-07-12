@@ -15,7 +15,7 @@ namespace DrWatch_android
     public static class Configuration
     {
         public const string ClientId = "397648763809-044990k2ah07p4t9h449nstrvstsdlq3.apps.googleusercontent.com";
-        public const string Scope = "profile";
-        public const string RedirectUrl = "https://app.DrWatch_android.DrWatch_android:/oauth2redirect";
+        public const string Scope = "email";
+        public const string RedirectUrl = "com.googleusercontent.apps.397648763809-044990k2ah07p4t9h449nstrvstsdlq3:/oauth2redirect";
     }
 }

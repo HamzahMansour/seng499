@@ -45,8 +45,13 @@ namespace DrWatch_android
 
         public async void OnAuthenticationCompleted(GoogleOAuthToken token)
         {
+            //Retrieve the user's email address
+            var googleService = new GoogleService();
+            var email = await googleService.GetEmailAsync(token.TokenType, token.AccessToken);
+
+            //Display it on the UI
             var googleButton = FindViewById<Button>(Resource.Id.googleLoginButton);
-            googleButton.Text = $"Hello, logged in user!";
+            googleButton.Text = $"Connected with {email}";
         }
 
         public void OnAuthenticationCancelled()
