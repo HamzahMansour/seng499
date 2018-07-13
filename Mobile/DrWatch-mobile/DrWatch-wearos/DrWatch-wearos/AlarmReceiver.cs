@@ -21,13 +21,13 @@ namespace DrWatch_wearos
         public override void OnReceive(Context context, Intent intent)
         {
             // set next alarm
-            var repetitionIntent = new Intent(context, typeof(AlarmReceiver));
-            var source = PendingIntent.GetBroadcast(context, 0, intent, 0);
-            var am = (AlarmManager)Android.App.Application.Context.GetSystemService(Context.AlarmService);
-            var calendar = DateTime.Parse(intent.GetStringExtra(Intent.ExtraText)).AddMinutes(1);
+            //var repetitionIntent = new Intent(context, typeof(AlarmReceiver));
+            //var source = PendingIntent.GetBroadcast(context, 0, intent, 0);
+            //var am = (AlarmManager)Android.App.Application.Context.GetSystemService(Context.AlarmService);
+            //var calendar = DateTime.Parse(intent.GetStringExtra(Intent.ExtraText)).AddMinutes(1);
 
-            DateTime dtBasis = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            am.SetExactAndAllowWhileIdle(AlarmType.RtcWakeup, (long)calendar.ToUniversalTime().Subtract(dtBasis).TotalMilliseconds, source);
+            //DateTime dtBasis = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            //am.SetExactAndAllowWhileIdle(AlarmType.RtcWakeup, (long)calendar.ToUniversalTime().Subtract(dtBasis).TotalMilliseconds, source);
 
 
             int notificationId = 001;
@@ -45,7 +45,7 @@ namespace DrWatch_wearos
 
             NotificationManager notificationManager = (NotificationManager) context.GetSystemService(Context.NotificationService);
 
-            Intent respondIntent = new Intent(context, typeof(AlarmReceiver));
+            Intent respondIntent = new Intent(context, typeof(NotificationService));
             PendingIntent respontPendingIntent = PendingIntent.GetActivity(context, 0, respondIntent, PendingIntentFlags.UpdateCurrent);
 
             Notification.Action action = new Notification.Action(Resource.Drawable.generic_confirmation,"hello", respontPendingIntent);

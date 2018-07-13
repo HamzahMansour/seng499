@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace DrWatch_android
 {
-    public class PrescriptionsFragment : Android.Support.V4.App.Fragment
+    public class PrescriptionsFragment : Android.Support.V4.App.Fragment, View.IOnClickListener
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,7 +32,30 @@ namespace DrWatch_android
         {
             // Use this to return your custom view for this Fragment
             var ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            return inflater.Inflate(Resource.Layout.prescriptions, container, false);
+            var v = inflater.Inflate(Resource.Layout.prescriptions, container, false);
+
+            Button addPerscriptionButton = (Button)v.FindViewById(Resource.Id.plusbtn);
+
+            addPerscriptionButton.SetOnClickListener(this);
+            return v;
+        }
+
+
+        private void Perscription(object sender, EventArgs eventArgs)
+        {
+            Intent myIntent = new Intent(Context, typeof(PerscriptionActivity));
+            // myIntent.PutExtra("key", value)
+            this.StartActivity(myIntent);
+        }
+
+        public void OnClick(View v)
+        {
+            switch (v.Id)
+            {
+                case Resource.Id.plusbtn:
+                    Perscription(v.Context, EventArgs.Empty);
+                    break;
+            }
         }
     }
 }
