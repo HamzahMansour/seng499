@@ -49,9 +49,15 @@ namespace DrWatch_android
             var googleService = new GoogleService();
             var email = await googleService.GetEmailAsync(token.TokenType, token.AccessToken);
 
+            //Retrieve IdToken
+            //var idToken = await googleService.GetOpenIdAsync(token.TokenType, token.AccessToken);            
+
             //Display it on the UI
             var googleButton = FindViewById<Button>(Resource.Id.googleLoginButton);
             googleButton.Text = $"Connected with {email}";
+
+            //Write token to console
+            //Console.Out.WriteLine(idToken);
         }
 
         public void OnAuthenticationCancelled()
