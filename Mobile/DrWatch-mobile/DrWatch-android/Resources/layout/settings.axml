@@ -3,8 +3,19 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <Button
+        android:text="Log in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LogInTestButton"
+        android:gravity="center" />
+    <Button
+        android:text="@string/testapiquery_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/APIQueryTestButton" />
     <TextView
-        android:text="ScheduleFragment"
+        android:text="SettingsFragment"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
