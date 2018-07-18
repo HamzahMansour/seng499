@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace DrWatch_android
 {
-    public class SettingsFragment : Android.Support.V4.App.Fragment
+    public class SettingsFragment : Android.Support.V4.App.Fragment, View.IOnClickListener
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,7 +32,41 @@ namespace DrWatch_android
         {
             // Use this to return your custom view for this Fragment
             var ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            return inflater.Inflate(Resource.Layout.settings, container, false);
+            var v = inflater.Inflate(Resource.Layout.settings, container, false);
+
+            Button logTestButton = (Button)v.FindViewById(Resource.Id.LogInTestButton);
+            logTestButton.SetOnClickListener(this);
+
+            Button queryApiTestButton = (Button)v.FindViewById(Resource.Id.APIQueryTestButton);
+            queryApiTestButton.SetOnClickListener(this);
+
+            return v;
+        }
+
+        public void OnClick(View v)
+        {
+            switch (v.Id)
+            {
+                case Resource.Id.LogInTestButton:
+                    LogInTest(v.Context, EventArgs.Empty);
+                    break;
+
+                case Resource.Id.APIQueryTestButton:
+                    TestApiQuery(v.Context, EventArgs.Empty);
+                    break;
+            }
+        }
+
+        public void LogInTest(object sender, EventArgs args)
+        {
+            var intent = new Intent(Context, typeof(LogInActivity));
+            StartActivity(intent);
+        }
+
+        public void TestApiQuery(object sender, EventArgs args)
+        {
+            var intent = new Intent(Context, typeof(QueryAPI));
+            StartActivity(intent);
         }
     }
 }
