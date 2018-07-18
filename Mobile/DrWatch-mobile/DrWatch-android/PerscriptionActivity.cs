@@ -296,11 +296,12 @@ namespace DrWatch_android
             }
 
             // nowhere to send to yet
-            //sendRequest(sb.ToString());
+            sendRequest(sb.ToString());
 
             // exit
             Intent i = new Intent(this, typeof(MainActivity));
             i.SetFlags(ActivityFlags.ClearTop);
+            i.PutExtra(Intent.ExtraText, sb.ToString());
             StartActivity(i);
         }
 
@@ -308,7 +309,7 @@ namespace DrWatch_android
         {
             HttpClient httpclient = new HttpClient();
 
-            httpclient.BaseAddress = new Uri("http://web.uvic.ca/~rsaujla:8080"); // wherever the server will 
+            httpclient.BaseAddress = new Uri("http://localhost:8080");//"http://web.uvic.ca/~rsaujla:8080"); // wherever the server will 
 
             // get content and post request
             var content = new StringContent(str, System.Text.Encoding.UTF8, "application/json");
