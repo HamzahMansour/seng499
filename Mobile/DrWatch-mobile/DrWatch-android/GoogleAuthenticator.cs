@@ -45,7 +45,7 @@ namespace DrWatch_android
                     TokenType = e.Account.Properties["token_type"],
                     AccessToken = e.Account.Properties["access_token"]
                 };
-                _authenticationDelegate.OnAuthenticationCompleted(token);
+                _authenticationDelegate.OnAuthenticationCompleted(token, e.Account);
             }
             else
             {

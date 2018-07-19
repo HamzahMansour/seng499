@@ -34,12 +34,13 @@ namespace DrWatch_android
 
             Android.Net.Uri uri_android = Intent.Data;
 
-            //Convert iOS NSUrl to C#/netxf/BCL System.Uri
+            //Convert Android.Net.Url to Uri
             Uri uri_netfx = new Uri(uri_android.ToString());
 
             //Send the URI to the Authenticator for continuation
             LogInActivity.Auth?.OnPageLoading(uri_netfx);
 
+            //Automatically switch back to app
             var intent = new Intent(this, typeof(LogInActivity));
             intent.SetFlags(ActivityFlags.ClearTop | ActivityFlags.SingleTop);
             StartActivity(intent);

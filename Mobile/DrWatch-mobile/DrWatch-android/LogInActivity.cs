@@ -43,21 +43,22 @@ namespace DrWatch_android
             StartActivity(intent);
         }
 
-        public async void OnAuthenticationCompleted(GoogleOAuthToken token)
+        public async void OnAuthenticationCompleted(GoogleOAuthToken token, Account account)
         {
             //Retrieve the user's email address
             var googleService = new GoogleService();
             var email = await googleService.GetEmailAsync(token.TokenType, token.AccessToken);
 
             //Retrieve IdToken
-            //var idToken = await googleService.GetOpenIdAsync(token.TokenType, token.AccessToken);            
+            var idToken = await googleService.GetOpenIdAsync(token.TokenType, token.AccessToken, account);            
 
-            //Display it on the UI
+            //Display email on the UI
             var googleButton = FindViewById<Button>(Resource.Id.googleLoginButton);
             googleButton.Text = $"Connected with {email}";
 
             //Write token to console
-            //Console.Out.WriteLine(idToken);
+            Console.Out.WriteLine("returned value:" + idToken);
+            AccountStore.Create().Save(account, "DrWatch_android");
         }
 
         public void OnAuthenticationCancelled()
