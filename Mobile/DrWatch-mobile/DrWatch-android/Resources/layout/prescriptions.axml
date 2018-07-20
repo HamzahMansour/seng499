@@ -15,11 +15,16 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5" />
-    <TextView
-        android:text="PrescriptionsFragment"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/textView1"
-        android:gravity="center" />
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:paddingTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerViewPerscription"
+            android:scrollbars="vertical" />
+    </FrameLayout>
 </LinearLayout>
