@@ -2,7 +2,7 @@
 using Xamarin.Auth;
 using DrWatch_android;
 
-namespace StoreCredentials
+namespace DrWatch_android
 {
     public class CredentialsService : ICredentialsService
     {

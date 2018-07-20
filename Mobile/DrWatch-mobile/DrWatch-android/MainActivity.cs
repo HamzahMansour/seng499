@@ -7,6 +7,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Content;
 using BottomNavigationBar;
+using Xamarin.Auth;
 
 namespace DrWatch_android
 {
@@ -18,6 +19,8 @@ namespace DrWatch_android
         private Android.Support.V4.App.Fragment prescriptionsFragment = PrescriptionsFragment.NewInstance();
         private Android.Support.V4.App.Fragment analyticsFragment = AnalyticsFragment.NewInstance();
         private Android.Support.V4.App.Fragment settingsFragment = SettingsFragment.NewInstance();
+
+        private CredentialsService _credentialsService = new CredentialsService();
 
         protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -31,6 +34,18 @@ namespace DrWatch_android
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
+            if (_credentialsService.DoCredentialsExist())
+            {
+                //Load stored credentials from AccountManager
+                Account account = _credentialsService.LoadStoredCredentials();
+            }
+            else
+            {
+                //No credentials stored, user must log in
+                var intent = new Intent(this, typeof(LogInActivity));
+                StartActivity(intent);
+                Finish();
+            }
         }
 
         protected override void OnSaveInstanceState(Bundle outState)

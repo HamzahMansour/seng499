@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
-        android:text="Log in"
+        android:text="Test Log in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/LogInTestButton"
@@ -14,6 +14,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/APIQueryTestButton" />
+    <Button
+        android:text="Log out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LogOutButton" />
     <TextView
         android:text="SettingsFragment"
         android:textAppearance="?android:attr/textAppearanceLarge"

@@ -40,6 +40,9 @@ namespace DrWatch_android
             Button queryApiTestButton = (Button)v.FindViewById(Resource.Id.APIQueryTestButton);
             queryApiTestButton.SetOnClickListener(this);
 
+            Button logOutButton = (Button)v.FindViewById(Resource.Id.LogOutButton);
+            logOutButton.SetOnClickListener(this);
+
             return v;
         }
 
@@ -54,6 +57,10 @@ namespace DrWatch_android
                 case Resource.Id.APIQueryTestButton:
                     TestApiQuery(v.Context, EventArgs.Empty);
                     break;
+
+                case Resource.Id.LogOutButton:
+                    LogOut(v.Context, EventArgs.Empty);
+                    break;
             }
         }
 
@@ -67,6 +74,15 @@ namespace DrWatch_android
         {
             var intent = new Intent(Context, typeof(QueryAPI));
             StartActivity(intent);
+        }
+
+        public void LogOut(object sender, EventArgs args)
+        {
+            CredentialsService credentialsService = new CredentialsService();
+            credentialsService.DeleteCredentials();
+            var intent = new Intent(Context, typeof(LogInActivity));
+            StartActivity(intent);
+            Activity.Finish();
         }
     }
 }
