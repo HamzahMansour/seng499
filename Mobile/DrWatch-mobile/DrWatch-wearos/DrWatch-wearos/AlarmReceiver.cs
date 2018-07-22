@@ -50,15 +50,21 @@ namespace DrWatch_wearos
         }
 
             NotificationManager notificationManager = (NotificationManager) context.GetSystemService(Context.NotificationService);
-
+            
             Intent respondIntent = new Intent(context, typeof(NotificationService));
             PendingIntent respontPendingIntent = PendingIntent.GetService(context, 0, respondIntent, 0);
 
-            Notification.Action action = new Notification.Action(Resource.Drawable.generic_confirmation,"hello", respontPendingIntent);
+            Notification.Action action = new Notification.Action(Resource.Drawable.generic_confirmation,"confirm", respontPendingIntent);
+
+            Intent snoozeIntent = new Intent(context, typeof(SnoozeService));
+            PendingIntent snoozePendingIntent = PendingIntent.GetService(context, 0, snoozeIntent, 0);
+
+            Notification.Action snooze = new Notification.Action(Resource.Drawable.generic_confirmation, "snooze", snoozePendingIntent);
             var noti = new Notification.Builder(context)
                 .SetContentTitle("Title").SetContentText("content text")
                 .SetSmallIcon(Resource.Drawable.pills)
-                .AddAction(action);
+                .AddAction(action)
+                .AddAction(snooze);
             
 
             notificationManager.Notify(notificationId, noti.Build());
