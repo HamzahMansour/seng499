@@ -18,6 +18,7 @@
 				<action android:name="android.intent.action.BOOT_COMPLETED" />
 			</intent-filter>
 		</receiver>
+    <service android:name="com.xamarin.watch_wear.services.NotificationService"/>
 		<meta-data android:name="com.google.android.wearable.standalone" android:value="true" />
 	</application>
 </manifest>

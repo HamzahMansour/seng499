@@ -41,12 +41,18 @@ namespace DrWatch_wearos
             AudioManager audioM = (AudioManager)context.GetSystemService(Context.AudioService);
             if (audioM.GetStreamVolume(Stream.Alarm) != 0) {
                 _mediap.Start();
-            }
+
+                // wait 5 sec... then stop the player.
+                new Handler().PostDelayed(() =>
+                {
+                    _mediap.Stop();
+                }, 5000);//millisec.
+        }
 
             NotificationManager notificationManager = (NotificationManager) context.GetSystemService(Context.NotificationService);
 
             Intent respondIntent = new Intent(context, typeof(NotificationService));
-            PendingIntent respontPendingIntent = PendingIntent.GetActivity(context, 0, respondIntent, PendingIntentFlags.UpdateCurrent);
+            PendingIntent respontPendingIntent = PendingIntent.GetService(context, 0, respondIntent, 0);
 
             Notification.Action action = new Notification.Action(Resource.Drawable.generic_confirmation,"hello", respontPendingIntent);
             var noti = new Notification.Builder(context)
