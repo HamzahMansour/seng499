@@ -19,7 +19,7 @@ namespace DrWatch_android
         private RecyclerView _recycler;
         private RecyclerView.Adapter mAdapter;
         private RecyclerView.LayoutManager mLayoutManager;
-        PerscriptionListing perscription;
+        public PerscriptionListing perscription;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,7 +46,7 @@ namespace DrWatch_android
 
             _recycler = (RecyclerView)v.FindViewById(Resource.Id.recyclerViewPerscription);
 
-            perscription = new PerscriptionListing();
+            perscription = new PerscriptionListing(((MainActivity) Activity).getPerscript());
 
             // use a linear layout manager
             mLayoutManager = new LinearLayoutManager(this.Context);
@@ -58,12 +58,24 @@ namespace DrWatch_android
             return v;
         }
 
-
+        private static int req = 0;
         private void Perscription(object sender, EventArgs eventArgs)
         {
             Intent myIntent = new Intent(Context, typeof(PerscriptionActivity));
             // myIntent.PutExtra("key", value)
-            this.StartActivity(myIntent);
+            this.StartActivityForResult(myIntent, req);
+        }
+
+        public void activityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data) {
+            if (resultCode == Result.Ok)
+            {
+                var tmp = new Perscription[((MainActivity)Activity).GetPerscriptSize()];
+                Array.Copy(((MainActivity)Activity).getPerscript(), tmp, tmp.Length);
+                perscription = new PerscriptionListing(tmp);
+                mAdapter = new PerscriptionsAdapter(perscription);
+                _recycler.SetAdapter(mAdapter);
+                mAdapter.NotifyDataSetChanged();
+            }
         }
 
         public void OnClick(View v)

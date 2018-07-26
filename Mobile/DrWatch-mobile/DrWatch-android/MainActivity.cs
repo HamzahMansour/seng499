@@ -8,6 +8,9 @@ using Android.Views;
 using Android.Content;
 using BottomNavigationBar;
 using Xamarin.Auth;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using Android.Runtime;
 
 namespace DrWatch_android
 {
@@ -22,6 +25,10 @@ namespace DrWatch_android
 
         private CredentialsService _credentialsService = new CredentialsService();
 
+        public Perscription[] Perscript { get; private set; }
+        // defaulting to test
+        private int endposPerscript;
+
         protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);            
@@ -33,6 +40,7 @@ namespace DrWatch_android
 
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
+
 
             if (_credentialsService.DoCredentialsExist())
             {
@@ -46,6 +54,94 @@ namespace DrWatch_android
                 StartActivity(intent);
                 Finish();
             }
+            
+            if (Perscript == null)
+            {
+                Perscript = PerscriptionListing._TestPerscriptions;
+                endposPerscript = Perscript.Length;
+            }
+        }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            if (resultCode == Result.Ok) {
+                if (data.Extras != null && data.Extras.ContainsKey("Perscription"))
+                {
+                    if (!data.Extras.Get("Perscription").ToString().Equals("cancel"))
+                        addPerscription(data.Extras.Get("Perscription").ToString());
+
+                    ((PrescriptionsFragment)prescriptionsFragment).activityResult(requestCode, resultCode, data);
+                    //LoadFragment(Resource.Id.bottomBarPrescriptions);
+                }
+            }
+        }
+
+        public Perscription[] getPerscript() {
+            return Perscript;
+        }
+        public int GetPerscriptSize() {
+            return endposPerscript;
+        }
+
+        private void addPerscription(string v)
+        {
+            PerscriptionDeseriaized deserialized = JsonConvert.DeserializeObject<PerscriptionDeseriaized>(v);
+
+            int idForm = 0;
+            int idTake = 0;
+
+            switch (deserialized.form) {
+                case "Pill":
+                    idForm = Resource.Drawable.pills;
+                    break;
+                case "Capsule":
+                    idForm = Resource.Drawable.capsule;
+                    break;
+                case "Patch":
+                    idForm = Resource.Drawable.patch;
+                    break;
+                case "Liquid":
+                    idForm = Resource.Drawable.liquid;
+                    break;
+                case "Injection":
+                    idForm = Resource.Drawable.needle;
+                    break;
+            }
+
+            switch (deserialized.takeWith)
+            {
+                case "None":
+                    idTake = Resource.Drawable.none;
+                    break;
+                case "Food":
+                    idTake = Resource.Drawable.food;
+                    break;
+                case "Drink":
+                    idTake = Resource.Drawable.water;
+                    break;
+                case "Food and Drink":
+                    idTake = Resource.Drawable.foodwater;
+                    break;
+            }
+
+            Perscription newP = new Perscription
+            {
+                _formID = idForm,
+                _perscription = deserialized.medication,
+                _dosage = deserialized.dosage,
+                _takeID = idTake,
+                _interval = deserialized.interval,
+                _start = deserialized.startDate,
+                _end = deserialized.endDate,
+                _schedule = new List<string>(deserialized.intervals)
+            };
+            if (Perscript.Length == endposPerscript) {
+                var arr = Perscript;
+                Array.Resize(ref arr, arr.Length + 20);
+                Perscript = arr;
+            }
+            Perscript[endposPerscript] = newP;
+            ++endposPerscript;
         }
 
         protected override void OnSaveInstanceState(Bundle outState)

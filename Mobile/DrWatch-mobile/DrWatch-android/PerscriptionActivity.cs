@@ -211,11 +211,12 @@ namespace DrWatch_android
         }
 
         // don't save anything return to perscriptions view
-        private void cancelOnClick(object sender, EventArgs eventArgs)
+        private void cancelOnClick(object sender, EventArgs e)
         {
-            Intent i = new Intent(this, typeof(MainActivity));
-            i.SetFlags(ActivityFlags.ClearTop);
-            StartActivity(i);
+            Intent i = new Intent();
+            i.PutExtra("Perscription", "cancel");
+            SetResult(Result.Ok, i);
+            Finish();
         }
 
         // submit our data to the database, sinc to the watch and exit
@@ -236,12 +237,12 @@ namespace DrWatch_android
             StringBuilder error = new StringBuilder("Incorrect/missing inputs for ");
             if (!r.IsMatch(startDate)) {
                 error_occured = true;
-                error.AppendFormat("{0} ", Resource.String.perscription_start);
+                error.Append("Perscription start time");
             }
             if (endDate.Length > 0 && !r.IsMatch(endDate))
             {
                 error_occured = true;
-                error.AppendFormat("{0} ", Resource.String.perscription_end);
+                error.Append("Perscription end time");
             }
             if (perscription.Length == 0)
             {
@@ -296,20 +297,20 @@ namespace DrWatch_android
             }
 
             // nowhere to send to yet
-            sendRequest(sb.ToString());
+            //sendRequest(sb.ToString());
 
             // exit
-            Intent i = new Intent(this, typeof(MainActivity));
-            i.SetFlags(ActivityFlags.ClearTop);
-            i.PutExtra(Intent.ExtraText, sb.ToString());
-            StartActivity(i);
+            Intent i = new Intent();
+            i.PutExtra("Perscription", sb.ToString());
+            SetResult(Result.Ok, i);
+            Finish();
         }
 
         private async void sendRequest(string str)
         {
             HttpClient httpclient = new HttpClient();
 
-            httpclient.BaseAddress = new Uri("http://localhost:8080");//"http://web.uvic.ca/~rsaujla:8080"); // wherever the server will 
+            httpclient.BaseAddress = new Uri("ec2-18-191-64-248.us-east-2.compute.amazonaws.com");//"http://web.uvic.ca/~rsaujla:8080"); // wherever the server will 
 
             // get content and post request
             var content = new StringContent(str, System.Text.Encoding.UTF8, "application/json");
