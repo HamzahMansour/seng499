@@ -9,9 +9,53 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 
 namespace DrWatch_android
 {
+    public class PerscriptionDeseriaized
+    {
+        /* writer.WritePropertyName("perscription");
+                 writer.WriteValue(perscription);
+                 writer.WritePropertyName("start_date");
+                 writer.WriteValue(startDate);
+                 writer.WritePropertyName("end_date");
+                 writer.WriteValue(endDate);
+                 writer.WritePropertyName("dosage");
+                 writer.WriteValue(dosage);
+                 writer.WritePropertyName("form");
+                 writer.WriteValue(form);
+                 writer.WritePropertyName("take_with");
+                 writer.WriteValue(takewith);
+                 writer.WritePropertyName("Interval");
+                 writer.WriteValue(Interval);
+                 writer.WritePropertyName("Intervals");
+                 writer.WriteStartArray();*/
+
+        [JsonProperty("perscription")]
+        public string medication { get; set; }
+
+        [JsonProperty("start_date")]
+        public string startDate { get; set; }
+
+        [JsonProperty("end_date")]
+        public string endDate { get; set; }
+
+        [JsonProperty("dosage")]
+        public string dosage { get; set; }
+
+        [JsonProperty("take_with")]
+        public string takeWith { get; set; }
+
+        [JsonProperty("Interval")]
+        public string interval { get; set; }
+
+        [JsonProperty("Intervals")]
+        public string[] intervals { get; set; }
+
+        [JsonProperty("form")]
+        public string form { get; set; }
+    }
     public class Perscription
     {
 
@@ -56,7 +100,7 @@ namespace DrWatch_android
     {
         private Perscription[] _perscriptions;
 
-        static Perscription[] _TestPerscriptions = {
+        public static Perscription[] _TestPerscriptions =  {
             new Perscription { _formID = Resource.Drawable.pills,
                                 _perscription = "acetaminofin", _dosage = "2.0",
                                 _takeID = Resource.Drawable.none, _interval = "Daily",

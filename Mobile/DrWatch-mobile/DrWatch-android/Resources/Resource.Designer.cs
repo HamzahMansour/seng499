@@ -4980,8 +4980,11 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f0b0070
 			public const int textSpacerNoTitle = 2131427440;
 			
-			// aapt resource value: 0x7f0b0095
-			public const int textView1 = 2131427477;
+			// aapt resource value: 0x7f0b0094
+			public const int textView1 = 2131427476;
+			
+			// aapt resource value: 0x7f0b00d3
+			public const int textViewEnd = 2131427539;
 			
 			// aapt resource value: 0x7f0b00d4
 			public const int textViewEnd = 2131427540;
