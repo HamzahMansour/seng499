@@ -34,5 +34,12 @@ namespace DrWatch_android
             var ignored = base.OnCreateView(inflater, container, savedInstanceState);
             return inflater.Inflate(Resource.Layout.schedule, container, false);
         }
+
+        private void Schedule(object sender, EventArgs eventArgs)
+        {
+            Intent myIntent = new Intent(Context, typeof(ScheduleActivity));
+            //myIntent.PutExtra("key", value)
+            this.StartActivity(myIntent);
+        }
     }
 }
