@@ -59,7 +59,7 @@ namespace DrWatch_android
                 // Locate and cache view references:
                 EventTime = itemView.FindViewById<TextView>(Resource.Id.textViewStart);
                 EventPrescription = itemView.FindViewById<TextView>(Resource.Id.textView1);
-                
+
                 // Detect user clicks on the item view and report which item was clicked (by layout position) to the listener
                 // itemView.Click += (sender, e) => listener(base.LayoutPosition);
             }
