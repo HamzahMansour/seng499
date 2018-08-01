@@ -45,7 +45,7 @@ namespace DrWatch_android
         public EventList() { _Events = _TestEvents; }
 
         public int numEvents { get { return _Events.Length; } }
-        
+
         public Event this[int i] { get { return _Events[i]; } }
 
     }
