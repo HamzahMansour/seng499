@@ -34,11 +34,11 @@ namespace DrWatch_android
             var ignored = base.OnCreateView(inflater, container, savedInstanceState);
             var v = inflater.Inflate(Resource.Layout.settings, container, false);
 
-            Button logTestButton = (Button)v.FindViewById(Resource.Id.LogInTestButton);
-            logTestButton.SetOnClickListener(this);
+            //Button logTestButton = (Button)v.FindViewById(Resource.Id.LogInTestButton);
+            //logTestButton.SetOnClickListener(this);
 
-            Button queryApiTestButton = (Button)v.FindViewById(Resource.Id.APIQueryTestButton);
-            queryApiTestButton.SetOnClickListener(this);
+            //Button queryApiTestButton = (Button)v.FindViewById(Resource.Id.APIQueryTestButton);
+            //queryApiTestButton.SetOnClickListener(this);
 
             Button logOutButton = (Button)v.FindViewById(Resource.Id.LogOutButton);
             logOutButton.SetOnClickListener(this);
@@ -50,13 +50,13 @@ namespace DrWatch_android
         {
             switch (v.Id)
             {
-                case Resource.Id.LogInTestButton:
-                    LogInTest(v.Context, EventArgs.Empty);
-                    break;
+                //case Resource.Id.LogInTestButton:
+                //    LogInTest(v.Context, EventArgs.Empty);
+                //    break;
 
-                case Resource.Id.APIQueryTestButton:
-                    TestApiQuery(v.Context, EventArgs.Empty);
-                    break;
+                //case Resource.Id.APIQueryTestButton:
+                //    TestApiQuery(v.Context, EventArgs.Empty);
+                //    break;
 
                 case Resource.Id.LogOutButton:
                     LogOut(v.Context, EventArgs.Empty);

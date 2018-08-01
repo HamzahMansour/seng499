@@ -4386,20 +4386,14 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f0b003a
 			public const int ALT = 2131427386;
 			
-			// aapt resource value: 0x7f0b00da
-			public const int APIQueryTestButton = 2131427546;
-			
 			// aapt resource value: 0x7f0b003b
 			public const int CTRL = 2131427387;
 			
 			// aapt resource value: 0x7f0b003c
 			public const int FUNCTION = 2131427388;
 			
-			// aapt resource value: 0x7f0b00d9
-			public const int LogInTestButton = 2131427545;
-			
-			// aapt resource value: 0x7f0b00db
-			public const int LogOutButton = 2131427547;
+			// aapt resource value: 0x7f0b00da
+			public const int LogOutButton = 2131427546;
 			
 			// aapt resource value: 0x7f0b003d
 			public const int META = 2131427389;
@@ -4461,8 +4455,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f0b0063
 			public const int action_mode_close_button = 2131427427;
 			
-			// aapt resource value: 0x7f0b00e7
-			public const int action_settings = 2131427559;
+			// aapt resource value: 0x7f0b00e6
+			public const int action_settings = 2131427558;
 			
 			// aapt resource value: 0x7f0b00c0
 			public const int action_text = 2131427520;
@@ -4539,17 +4533,17 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f0b0045
 			public const int bottom = 2131427397;
 			
-			// aapt resource value: 0x7f0b00e5
-			public const int bottomBarAnalytics = 2131427557;
-			
 			// aapt resource value: 0x7f0b00e4
-			public const int bottomBarPrescriptions = 2131427556;
+			public const int bottomBarAnalytics = 2131427556;
 			
 			// aapt resource value: 0x7f0b00e3
-			public const int bottomBarSchedule = 2131427555;
+			public const int bottomBarPrescriptions = 2131427555;
 			
-			// aapt resource value: 0x7f0b00e6
-			public const int bottomBarSettings = 2131427558;
+			// aapt resource value: 0x7f0b00e2
+			public const int bottomBarSchedule = 2131427554;
+			
+			// aapt resource value: 0x7f0b00e5
+			public const int bottomBarSettings = 2131427557;
 			
 			// aapt resource value: 0x7f0b00b2
 			public const int btnDeleteSelectedPerscriptionTime = 2131427506;
@@ -4746,17 +4740,17 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f0b0068
 			public const int list_item = 2131427432;
 			
-			// aapt resource value: 0x7f0b00e2
-			public const int masked = 2131427554;
+			// aapt resource value: 0x7f0b00e1
+			public const int masked = 2131427553;
 			
 			// aapt resource value: 0x7f0b00c4
 			public const int media_actions = 2131427524;
 			
-			// aapt resource value: 0x7f0b00dc
-			public const int medicationBrandText = 2131427548;
+			// aapt resource value: 0x7f0b00db
+			public const int medicationBrandText = 2131427547;
 			
-			// aapt resource value: 0x7f0b00e0
-			public const int message = 2131427552;
+			// aapt resource value: 0x7f0b00df
+			public const int message = 2131427551;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int middle = 2131427385;
@@ -4812,8 +4806,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f0b00d7
 			public const int plusbtn = 2131427543;
 			
-			// aapt resource value: 0x7f0b00de
-			public const int progressBar = 2131427550;
+			// aapt resource value: 0x7f0b00dd
+			public const int progressBar = 2131427549;
 			
 			// aapt resource value: 0x7f0b0006
 			public const int progress_circular = 2131427334;
@@ -4821,8 +4815,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f0b0007
 			public const int progress_horizontal = 2131427335;
 			
-			// aapt resource value: 0x7f0b00dd
-			public const int queryButton = 2131427549;
+			// aapt resource value: 0x7f0b00dc
+			public const int queryButton = 2131427548;
 			
 			// aapt resource value: 0x7f0b007c
 			public const int radio = 2131427452;
@@ -4830,8 +4824,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f0b00d8
 			public const int recyclerViewPerscription = 2131427544;
 			
-			// aapt resource value: 0x7f0b00df
-			public const int responseView = 2131427551;
+			// aapt resource value: 0x7f0b00de
+			public const int responseView = 2131427550;
 			
 			// aapt resource value: 0x7f0b0051
 			public const int right = 2131427409;
@@ -4850,6 +4844,9 @@ namespace DrWatch_android
 			
 			// aapt resource value: 0x7f0b000e
 			public const int save_scale_type = 2131427342;
+			
+			// aapt resource value: 0x7f0b00d9
+			public const int scheduleRecyclerView = 2131427545;
 			
 			// aapt resource value: 0x7f0b00d6
 			public const int scheduleSpinner = 2131427542;
@@ -5064,8 +5061,8 @@ namespace DrWatch_android
 			// aapt resource value: 0x7f0b0016
 			public const int view_offset_helper = 2131427350;
 			
-			// aapt resource value: 0x7f0b00e1
-			public const int visible = 2131427553;
+			// aapt resource value: 0x7f0b00e0
+			public const int visible = 2131427552;
 			
 			// aapt resource value: 0x7f0b0093
 			public const int webview = 2131427475;
