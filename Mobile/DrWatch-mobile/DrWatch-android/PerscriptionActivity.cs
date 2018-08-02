@@ -80,8 +80,17 @@ namespace DrWatch_android
         {
             string url = "https://health-products.canada.ca/api/drug/drugproduct/?lang=en&type=json";
             string json = await FetchMedicationAsync(url);
-            List<string> allBrands = await ParseBrandNamesFromJson(json);
-            return allBrands;
+            if(json != "")
+            {
+                List<string> allBrands = await ParseBrandNamesFromJson(json);
+                return allBrands;
+            }
+            else
+            {
+                List<string> emptyList = new List<string>();
+                return emptyList;
+            }
+            
         }
 
         private Task<List<string>> ParseBrandNamesFromJson(string json)
@@ -139,10 +148,10 @@ namespace DrWatch_android
 
                 }
             }
-            catch(HttpRequestException e)
+            catch(Exception e)
             {
-                Console.Out.WriteLine("ERROR: {0}", e);
-                throw;
+                Console.Out.WriteLine("{0}. Exception caught", e);
+                return "";
             }
             
 
